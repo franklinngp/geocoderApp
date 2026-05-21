@@ -10,6 +10,8 @@ import { MapService } from '../../map-service';
 export class LayerController { 
 
   mapService = inject(MapService);
+  datosBusquedaNominatim = this.mapService.datosBusquedaNominatim;
+  coordenadasCursor = this.mapService.coordenadasCursor;
 
   verificar_visibilidad() {
     return this.mapService.mapRef()?.getLayers().getArray().find((layer) => layer.get('name') === 'layer_ide')?.getVisible();
@@ -46,4 +48,5 @@ export class LayerController {
       layer.setVisible(!layer.getVisible());
     }
   }
+  
 }

@@ -29,6 +29,8 @@ export class HeaderComponent {
         if (!map) return;
 
         const result = data[0];
+        this.mapService.datosBusquedaNominatim.set(data);
+        console.log(this.mapService.datosBusquedaNominatim());
         const lon = Number(result.lon);
         const lat = Number(result.lat);
         const view = map.getView();

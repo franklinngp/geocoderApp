@@ -29,6 +29,7 @@ import type { FeatureLike } from 'ol/Feature';
 import type MapBrowserEvent from 'ol/MapBrowserEvent';
 import { getCenter } from 'ol/extent';
 import Point from 'ol/geom/Point';
+import { toLonLat } from 'ol/proj';
 import { LayerController } from "../layer-controller/layer-controller";
 
 @Component({
@@ -74,7 +75,16 @@ export class MapComponent implements AfterViewInit {
       }),
     });
     this.mapService.mapRef.set(this.map);
-   
+
+    this.map.on('pointermove', (event: MapBrowserEvent) => {
+      if (event.dragging) return;
+      const [lon, lat] = toLonLat(event.coordinate);
+      this.mapService.coordenadasCursor.set({ lon, lat });
+    });
+    this.map.getViewport().addEventListener('pointerleave', () => {
+      this.mapService.coordenadasCursor.set(null);
+    });
+
     // capa IDE
     const capaIde = new TileLayer({
       source: new TileWMS({

@@ -1,6 +1,6 @@
-<div class="flex flex-col items-center justify-between w-full max-w-xs py-2">
+<div class="flex flex-col items-center justify-end w-full max-w-xs py-2">
  
-  
+      
     <div class="join bg-base-300 p-1 rounded-lg border border-white/5">
       <input 
         class="join-item btn btn-xs px-4 border-none hover:bg-base-100 checked:!bg-primary checked:!text-primary-content transition-all" 
@@ -112,5 +112,21 @@
         </svg>
       </label>
     </div>
-    
+    <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">
+      <p class="font-bold">Datos de la búsqueda</p>
+      <div class="flex flex-col gap-2">
+        <p>{{ datosBusquedaNominatim()[0]?.display_name ?? 'No hay datos de la búsqueda'}}</p>
+        <p>{{ datosBusquedaNominatim()[0]?.lat ?? 'No hay datos de la búsqueda' }}</p>
+        <p>{{ datosBusquedaNominatim()[0]?.lon ?? 'No hay datos de la búsqueda' }}</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">
+      <p class="font-bold">Coordenadas del cursor</p>
+      @if (coordenadasCursor(); as c) {
+        <p>Lat: {{ c.lat.toFixed(5) }}</p>
+        <p>Lon: {{ c.lon.toFixed(5) }}</p>
+      } @else {
+        <p class="text-base-content/60">Mueva el cursor sobre el mapa</p>
+      }
+    </div>
   </div>

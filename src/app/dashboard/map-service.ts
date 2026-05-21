@@ -11,6 +11,8 @@ import VectorSource from 'ol/source/Vector';
 export class MapService {
   mapRef = signal<Map | null>(null);
   searchSource = signal<VectorSource | null>(null);
+  datosBusquedaNominatim = signal<any[]>([]);
+  coordenadasCursor = signal<{ lon: number; lat: number } | null>(null);
 
   setSearchMarker(lon: number, lat: number): void {
     const source = this.searchSource();
