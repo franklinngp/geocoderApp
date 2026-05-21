@@ -1,0 +1,116 @@
+<div class="flex flex-col items-center justify-between w-full max-w-xs py-2">
+ 
+  
+    <div class="join bg-base-300 p-1 rounded-lg border border-white/5">
+      <input 
+        class="join-item btn btn-xs px-4 border-none hover:bg-base-100 checked:!bg-primary checked:!text-primary-content transition-all" 
+        type="radio" 
+        name="layer" 
+        aria-label="OSM" 
+        [checked]="!verificar_visibilidad()"
+        (change)="onChangeLayer()"
+        />
+      <input 
+        class="join-item btn btn-xs px-4 border-none hover:bg-base-100 checked:!bg-primary checked:!text-primary-content transition-all" 
+        type="radio" 
+        name="layer" 
+        aria-label="IDE UY" 
+        [checked]="verificar_visibilidad()"
+        (change)="onChangeLayer()"
+        />
+    </div>
+    <div class="flex flex-row gap-2 mt-2">
+      <p>Aeropuertos</p>
+      <label class="toggle text-base-content">
+   
+        <input type="checkbox" (change)="onChangeLayerAeropuertos()"/>
+        <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="4"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </g>
+        </svg>
+        <svg
+          aria-label="disabled"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </label>
+    </div>
+    <div class="flex flex-row gap-2 mt-2">
+      <p>Áreas pobladas</p>
+      <label class="toggle text-base-content">
+   
+        <input type="checkbox" (change)="onChangeLayerAreasPobladas()"/>
+        <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="4"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </g>
+        </svg>
+        <svg
+          aria-label="disabled"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </label>
+    </div>
+    <div class="flex flex-row gap-2 mt-2">
+      <p>Departamentos</p>
+      <label class="toggle text-base-content">
+   
+        <input type="checkbox" (change)="onChangeLayerDepartamentos()"/>
+        <svg aria-label="enabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="4"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path d="M20 6 9 17l-5-5"></path>
+          </g>
+        </svg>
+        <svg
+          aria-label="disabled"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </label>
+    </div>
+    
+  </div>
