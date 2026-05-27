@@ -16,6 +16,7 @@ import TileWMS from 'ol/source/TileWMS';
 import Stroke from 'ol/style/Stroke';
 import Fill from 'ol/style/Fill';
 import Style from 'ol/style/Style';
+import CircleStyle from 'ol/style/Circle';
 import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
 import GeoJSON from 'ol/format/GeoJSON';
@@ -23,6 +24,7 @@ import { bbox as bboxStrategy } from 'ol/loadingstrategy';
 import { MapService } from '../../map-service';
 import { CentrarMapaComponent } from "../centrar-mapa/centrar-mapa";
 import { puntosTuristicos } from '../../../data/puntosTuristicos';
+import { puntosGeocodificados } from '../../../data/puntosGeocodificados';
 import Icon from 'ol/style/Icon';
 import Overlay from 'ol/Overlay';
 import type { FeatureLike } from 'ol/Feature';
@@ -193,6 +195,29 @@ this.map.addLayer(capaDepartamentos);
     });
 
     this.map.addLayer(puntosTuristicosLayer);
+
+    // capa nominatim (puntos geocodificados)
+    const nominatimSource = new VectorSource({
+      features: new GeoJSON().readFeatures(puntosGeocodificados, {
+        dataProjection: 'EPSG:4326',
+        featureProjection: 'EPSG:3857',
+      }),
+    });
+
+    const nominatimLayer = new VectorLayer({
+      source: nominatimSource,
+      style: new Style({
+        image: new CircleStyle({
+          radius: 6,
+          fill: new Fill({ color: 'green' }),
+          stroke: new Stroke({ color: '#ffffff', width: 1 }),
+        }),
+      }),
+      zIndex: 10,
+    });
+    nominatimLayer.set('name', 'nominatim');
+    nominatimLayer.setVisible(true);
+    this.map.addLayer(nominatimLayer);
 
     const searchSource = new VectorSource();
     this.mapService.searchSource.set(searchSource);

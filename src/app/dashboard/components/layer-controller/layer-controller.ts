@@ -48,5 +48,12 @@ export class LayerController {
       layer.setVisible(!layer.getVisible());
     }
   }
+
+  onChangeLayerNominatim() {
+    const layer = this.mapService.mapRef()?.getLayers().getArray().find((layer) => layer.get('name') === 'nominatim');
+    if (layer) {
+      layer.setVisible(!layer.getVisible());
+    }
+  }
   
 }

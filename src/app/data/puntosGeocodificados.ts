@@ -1,6 +1,6 @@
-export const puntosTuristicos = {
+export const puntosGeocodificados: any = {
   "type": "FeatureCollection",
-  "name": "turismo_nominatim_experimento_uruguay",
+  "name": "turismo_nominatim",
   "features": [
     {
       "type": "Feature",
@@ -13,8 +13,7 @@ export const puntosTuristicos = {
         "type": "park",
         "@geometry": "center",
         "nominatim_display_name": "Zoológico Villa Dolores, 3245, Avenida General Rivera, Villa Dolores, Parque Batlle, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 27.56
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -36,8 +35,7 @@ export const puntosTuristicos = {
         "type": "museum",
         "@geometry": "center",
         "nominatim_display_name": "Museo Nacional de Artes Visuales, 2283, Avenida Tomás Giribaldi, Parque Rodó, Montevideo, 11311, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 4.08
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -57,16 +55,13 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "park",
-        "@geometry": "center",
-        "nominatim_display_name": "Parque de la Amistad, 3245, Parque Batlle, Montevideo, 11600, Uruguay",
-        "nominatim_class": "leisure",
-        "experimento_error_metros": 6.81
+        "@geometry": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1448045,
-          -34.9022331
+          -56.1447914,
+          -34.9021728
         ]
       },
       "id": "way/180398319"
@@ -82,8 +77,7 @@ export const puntosTuristicos = {
         "type": "marketplace",
         "@geometry": "center",
         "nominatim_display_name": "Mercado Agrícola de Montevideo, 2220, José L. Terra, Reus, Villa Muñoz, Montevideo, 11800, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 10.08
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -105,8 +99,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Regency Way, 3377, Avenida General Rivera, Villa Dolores, Parque Batlle, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 4.98
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -128,8 +121,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Hotel Ibis, 1473, La Cumparsita, Palermo, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -148,8 +140,7 @@ export const puntosTuristicos = {
         "street": "South 1st Street",
         "city": "Montevideo",
         "country": null,
-        "type": "library",
-        "experimento_error_metros": -1
+        "type": "library"
       },
       "geometry": {
         "type": "Point",
@@ -169,16 +160,13 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "park",
-        "@geometry": "center",
-        "nominatim_display_name": "CAMBADU, 4196, Aires Puros, Montevideo, Uruguay",
-        "nominatim_class": "leisure",
-        "experimento_error_metros": 31.02
+        "@geometry": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1880308,
-          -34.8588715
+          -56.187947,
+          -34.8586011
         ]
       },
       "id": "way/440756997"
@@ -194,8 +182,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Continental Senior, 1373, Paraguay, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0.01
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -217,8 +204,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Hotel América, 1330, Río Negro, Barrio Sur, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -240,8 +226,7 @@ export const puntosTuristicos = {
         "type": "theatre",
         "@geometry": "center",
         "nominatim_display_name": "Gran Teatro Metro, 1211, San José, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 1.33
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -263,8 +248,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Klee, 1303, San José, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0.66
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -286,8 +270,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Dazzler Hotel Montevideo, 2752, 21 de Setiembre, Punta Carretas, Montevideo, 11311, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 1.89
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -309,8 +292,7 @@ export const puntosTuristicos = {
         "type": "gallery",
         "@geometry": "center",
         "nominatim_display_name": "Galería de las Misiones, 464, 25 de Mayo, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0.05
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -332,8 +314,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Hotel Mediterráneo, 1486, Paraguay, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 1.08
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -355,8 +336,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "London Palace Hotel, 1278, Río Negro, Barrio Sur, Montevideo, 11110, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -370,22 +350,21 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Hotel Iberia",
+        "name": "Iberia",
         "housenumber": "1097",
         "street": "Maldonado",
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
         "@geometry": "center",
-        "nominatim_display_name": "Hotel Iberia, El Mesana (Calle 24), Punta Del Este, Maldonado, 20100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 114065.34
+        "nominatim_display_name": "Iberia, 1097, Maldonado, Barrio Sur, Montevideo, 11114, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -54.9426408,
-          -34.9626856
+          -56.1922848,
+          -34.9096039
         ]
       },
       "id": "way/456808395"
@@ -401,8 +380,7 @@ export const puntosTuristicos = {
         "type": "theatre",
         "@geometry": "center",
         "nominatim_display_name": "El Tinglado, 2035, Colonia, Cordón, Montevideo, 11200, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0.42
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -424,8 +402,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Holiday Inn, 823, Colonia, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -439,22 +416,21 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Museo del Carnaval",
+        "name": "Museo de Carnaval",
         "housenumber": "218",
         "street": "Rambla 25 de Agosto de 1825",
         "city": null,
         "country": null,
         "type": "museum",
         "@geometry": "center",
-        "nominatim_display_name": "Museo del carnaval, Pasarela del Corsódromo, Barrio Agmer, Gualeguaychú, Distrito Costa Uruguay Sur, Departamento Gualeguaychú, Entre Ríos, 2820, Argentina",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 298990.16
+        "nominatim_display_name": "Museo de Carnaval, 218, Rambla 25 de Agosto de 1825, Ciudad Vieja, Montevideo, 11000, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -58.5219823,
-          -33.0187125
+          -56.21217,
+          -34.9057085
         ]
       },
       "id": "way/457975586"
@@ -470,8 +446,7 @@ export const puntosTuristicos = {
         "type": "museum",
         "@geometry": "center",
         "nominatim_display_name": "Museo de Arte Precolombino e Indígena, 279, 25 de Mayo, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0.09
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -485,7 +460,7 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Hotel Pedro Figari",
+        "name": "Pedro Figari",
         "housenumber": "6535",
         "street": "Rambla República de México",
         "city": "Montevideo",
@@ -493,8 +468,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Pedro Figari, 6535, Rambla República de México, Carrasco, Montevideo, 11500, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 3.32
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -516,8 +490,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Hotel Escuela, 2714, Bulevar General Artigas, Jacinto Vera, Montevideo, 11820, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 17.56
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -539,8 +512,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Palladium Business Hotel, 1146, Tomás de Tezanos, Buceo, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 2.05
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -562,8 +534,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Hyatt Centric, 1479, Rambla República del Perú, La Mondiola, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0.76
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -585,8 +556,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Armon Suites, 2885, 21 de Setiembre, Punta Carretas, Montevideo, 11311, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 1.5
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -608,8 +578,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "Regency Golf, 2473, Francisco Solano García, Punta Carretas, Montevideo, 11303, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 1.23
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -631,8 +600,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "After Hotel, 3755, Arturo Prat, Buceo, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0.66
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -654,8 +622,7 @@ export const puntosTuristicos = {
         "type": "museum",
         "@geometry": "center",
         "nominatim_display_name": "Ateneo, 1157, Doctora Adela Reta, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 3.14
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -677,8 +644,7 @@ export const puntosTuristicos = {
         "type": "theatre",
         "@geometry": "center",
         "nominatim_display_name": "Centro Cultural Florencio Sánchez, 3281, Grecia, Cerro, Montevideo, 12800, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0.5
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -699,8 +665,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Synergia Golf, 2361, Doctor Héctor Miranda, Punta Carretas, Montevideo, 11303, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -721,15 +686,14 @@ export const puntosTuristicos = {
         "country": null,
         "type": "library",
         "@geometry": "center",
-        "nominatim_display_name": "Francisco Schinca, Unión, Montevideo, 11600, Uruguay",
-        "nominatim_class": "highway",
-        "experimento_error_metros": 547.04
+        "nominatim_display_name": "Francisco Schinca, 4210, Avenida 8 de Octubre, Unión, Montevideo, 12100, Uruguay",
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1308644,
-          -34.8725615
+          -56.1344471,
+          -34.8686185
         ]
       },
       "id": "way/717011521"
@@ -737,22 +701,19 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Aguada Park",
+        "name": "Lugar de reunión",
         "housenumber": "2141",
         "street": "Paraguay",
         "city": "Montevideo",
         "country": null,
         "type": "park",
-        "@geometry": "center",
-        "nominatim_display_name": "Aguada Park, 2141, Paraguay, Arroyo Seco, Montevideo, 11800, Uruguay",
-        "nominatim_class": "building",
-        "experimento_error_metros": 34.98
+        "@geometry": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.194888,
-          -34.8912924
+          -56.1945059,
+          -34.891265
         ]
       },
       "id": "way/752693775"
@@ -768,8 +729,7 @@ export const puntosTuristicos = {
         "type": "museum",
         "@geometry": "center",
         "nominatim_display_name": "Museo Naval, 1555, Rambla Presidente Charles de Gaulle, La Mondiola, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0.01
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -790,8 +750,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Casa de Fructuoso Rivera, 437, Rincón, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -812,8 +771,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Casa de Antonio Montero, 428, 25 de Mayo, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -827,15 +785,14 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Hotel Lafayette",
+        "name": "Lafayette",
         "housenumber": "1170",
         "street": "Soriano",
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Lafayette, 1170, Soriano, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -856,8 +813,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo de Historia del Arte, 1326, Ejido, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -878,8 +834,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Regency Suites, 6428, Doctor Gabriel Otero, Carrasco, Montevideo, 11500, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -898,10 +853,7 @@ export const puntosTuristicos = {
         "street": "Cerrito",
         "city": "Montevideo",
         "country": "UY",
-        "type": "hotel",
-        "nominatim_display_name": "Puerto Mercado Hotel, 262,264,266, Cerrito, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "type": "hotel"
       },
       "geometry": {
         "type": "Point",
@@ -920,10 +872,7 @@ export const puntosTuristicos = {
         "street": "Eduardo Dionisio Carbajal",
         "city": "Montevideo",
         "country": "UY",
-        "type": "marketplace",
-        "nominatim_display_name": "Cattivelli Hnos. S.A., 2767,2775,2779, Eduardo Dionisio Carbajal, Bella Vista, Montevideo, 11800, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "type": "marketplace"
       },
       "geometry": {
         "type": "Point",
@@ -944,8 +893,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Rambler Hostels, 3452, Luis Lamas, La Mondiola, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -966,8 +914,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Quijano Hotel, 1281, Carlos Quijano, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -987,15 +934,14 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "artwork",
-        "nominatim_display_name": "Bob Marley, Larrañaga, Montevideo, Uruguay",
-        "nominatim_class": "landuse",
-        "experimento_error_metros": 20.48
+        "nominatim_display_name": "Bob Marley, 2663, Ingavi, Larrañaga, Montevideo, 11820, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1639999,
-          -34.8783891
+          -56.163909,
+          -34.8785575
         ]
       },
       "id": "node/945599447"
@@ -1010,8 +956,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Gurvich, 524, Sarandí, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1033,8 +978,7 @@ export const puntosTuristicos = {
         "type": "hotel",
         "@geometry": "center",
         "nominatim_display_name": "ibis Styles Montevideo Biarritz, 2783, 21 de Setiembre, Punta Carretas, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 1.11
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1056,8 +1000,7 @@ export const puntosTuristicos = {
         "type": "attraction",
         "@geometry": "center",
         "nominatim_display_name": "Planetario de Montevideo \"Agrimensor Germán Barbato\", 3275, Avenida General Rivera, Villa Dolores, Parque Batlle, Montevideo, 11600, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 1.73
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -1078,8 +1021,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Radisson Montevideo Victoria Plaza Hotel, 759, Plaza Independencia, Ciudad Vieja, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1099,16 +1041,13 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": null,
         "type": "park",
-        "@geometry": "center",
-        "nominatim_display_name": "Club de Baby Futbol Estrella Federal, sn, Sayago, Montevideo, 12900, Uruguay",
-        "nominatim_class": "leisure",
-        "experimento_error_metros": 1.36
+        "@geometry": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.2288666,
-          -34.8367966
+          -56.2288669,
+          -34.8368088
         ]
       },
       "id": "way/1218272271"
@@ -1123,8 +1062,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "theatre",
         "nominatim_display_name": "Sala La Experimental, 5071, Doctor Decroly, Malvín, Montevideo, 11403, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -1145,8 +1083,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Nacional de Antropología, 948, Avenida de las Instrucciones, Paso de las Duranas, Montevideo, 11700, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1167,8 +1104,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Che Lagarto, 2063, Colonia, Cordón, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1189,8 +1125,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Balmoral Plaza Hotel, 1126, Circunvalación Doctor Enrique Tarigo, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1211,8 +1146,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Casa de Juan Zorrilla de San Martín, 96, José Luis Zorrilla de San Martín, Punta Carretas, Montevideo, 11303, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1233,8 +1167,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "My Suites Hotel, 674, Juan Benito Blanco, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1255,8 +1188,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Willy Fogg, 977, Maldonado, Barrio Sur, Montevideo, 11110, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1277,8 +1209,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hostel",
         "nominatim_display_name": "Splendido Hotel, 1314, Bartolomé Mitre, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1299,8 +1230,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Castillo Pittamiglio, 633, Rambla Mahatma Gandhi, Punta Carretas, Montevideo, 11311, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1321,8 +1251,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "attraction",
         "nominatim_display_name": "Castillo Idiarte Borda, 5912, Avenida Lezica, Ambientalista, Colón, Montevideo, 12500, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1343,8 +1272,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Torres García, 683, Sarandí, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1365,8 +1293,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo del Gaucho y la Moneda, 351, Cerrito, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1387,8 +1314,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Hotel Aramaya, 1103, Avenida 18 de Julio, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1409,8 +1335,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Hotel Palacio, 1364, Bartolomé Mitre, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1430,15 +1355,14 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
-        "nominatim_display_name": "Uruguay, Don Manuel, Alvear, Municipio de Alvear, Gran Rosario, Departamento Rosario, Santa Fe, 2126, Argentina",
-        "nominatim_class": "highway",
-        "experimento_error_metros": 456949.18
+        "nominatim_display_name": "Alvear, 1372,1374, Yi, Centro, Montevideo, 11100, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -60.6343392,
-          -33.0861274
+          -56.1890262,
+          -34.9052772
         ]
       },
       "id": "node/3200111661"
@@ -1453,8 +1377,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Massini Suites, 3288, Ramón Masini, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1475,8 +1398,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Regency Rambla, 6079, Rambla República de México, Carrasco, Montevideo, 11500, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1497,8 +1419,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Pocitos Plaza, 640, Juan Benito Blanco, Pocitos, Montevideo, 11311, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1519,8 +1440,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo de la Memoria, 1057, Avenida de las Instrucciones, Paso de las Duranas, Montevideo, 11700, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1541,8 +1461,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "AXSUR, 1260, Misiones, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1563,8 +1482,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Andes 1972, 619, Rincón, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1585,8 +1503,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Buenas Vibras Hostel, 2077, Maldonado, Parque Rodó, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1607,8 +1524,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "theatre",
         "nominatim_display_name": "Auditorio Nacional \"Adela Reta\", 1455, Andes, Barrio Sur, Montevideo, 11000, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -1629,8 +1545,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "museum",
         "nominatim_display_name": "Museo del Tango y el Turf, 1373, Rimac, Malvín, Montevideo, 11403, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1650,15 +1565,14 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
-        "nominatim_display_name": "Mar del Plata, Rocha, Uruguay",
-        "nominatim_class": "boundary",
-        "experimento_error_metros": 191406.77
+        "nominatim_display_name": "Mar del Plata, 1394, Río de la Plata, Malvín, Montevideo, 11403, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -54.0552069,
-          -34.5318317
+          -56.1019195,
+          -34.8961283
         ]
       },
       "id": "node/4255482663"
@@ -1673,8 +1587,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "theatre",
         "nominatim_display_name": "La Trastienda, 1763, Avenida Daniel Fernández Crespo, Cordón, Montevideo, 11200, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -1694,15 +1607,14 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
-        "nominatim_display_name": "José Martí, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "highway",
-        "experimento_error_metros": 293.57
+        "nominatim_display_name": "Martí, 3325, José Martí, Pocitos, Montevideo, 11300, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1515208,
-          -34.9097694
+          -56.1494632,
+          -34.9118
         ]
       },
       "id": "node/4401556717"
@@ -1717,8 +1629,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "gallery",
         "nominatim_display_name": "Portón de San Pedro, 1427, Ciudadela, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "shop",
-        "experimento_error_metros": 0
+        "nominatim_class": "shop"
       },
       "geometry": {
         "type": "Point",
@@ -1739,8 +1650,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hotel",
         "nominatim_display_name": "Oxford Hotel, 1286, Paraguay, Barrio Sur, Montevideo, 11110, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1761,8 +1671,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Alma Histórica Boutique Hotel, 1433, Solís, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1783,8 +1692,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "artwork",
         "nominatim_display_name": "Casa Tomás Toribio, 528, Piedras, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1805,8 +1713,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hostel",
         "nominatim_display_name": "Contraluz Art Hostel, 865, Juan D. Jackson, Parque Rodó, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1827,8 +1734,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hostel",
         "nominatim_display_name": "Caballo Loco Hostel, 1287, Héctor Gutiérrez Ruiz, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1849,8 +1755,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Peugeot, 1579, Paraguay, Aguada, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1871,8 +1776,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "MVD Urban Housing - Pocitos, 649, Francisco Antonio Vidal, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1893,8 +1797,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Figari, 1427, Juan Carlos Gómez, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1915,8 +1818,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Casa Villamajó, 743, Domingo Cullen, Punta Carretas, Montevideo, 11311, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1937,8 +1839,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hotel",
         "nominatim_display_name": "Vivaldi, 2903, Blanca del Tabaré, Punta Carretas, Montevideo, 11303, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1959,8 +1860,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Casa de Juan Francisco Giró, 586, Cerrito, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -1981,8 +1881,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Casa de Giuseppe Garibaldi, 314, 25 de Mayo, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2003,8 +1902,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Casa de Juan Antonio Lavalleja, 1469, Zabala, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2025,8 +1923,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Casa de Manuel Ximénez y Gómez, 580, 25 de Agosto, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2047,8 +1944,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Aloft Montevideo Hotel, 350, Víctor Soliño, Punta Carretas, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2069,8 +1965,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "theatre",
         "nominatim_display_name": "El Comedy, 3064, Gabriel Pereira, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2091,8 +1986,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Hotel Alcazaba, 1669, Doctor Mario Cassinoni, Tres Cruces, Montevideo, 11601, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2113,8 +2007,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Days Inn Montevideo, 1821, Acevedo Díaz, Tres Cruces, Montevideo, 11601, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2135,8 +2028,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo del Automóvil Club del Uruguay, 1251, Colonia, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2157,8 +2049,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Circus Hostel & Hotel, 1274, Treinta y Tres, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2179,8 +2070,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "theatre",
         "nominatim_display_name": "Sala Zitarrosa, 1012, Avenida 18 de Julio, Centro, Montevideo, 11200, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2201,8 +2091,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Own Montevideo, 177, José Luis Zorrilla de San Martín, Punta Carretas, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2223,8 +2112,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Opta Coliving, 2370, Manuel José Errazquin, Punta Carretas, Montevideo, 11303, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2245,8 +2133,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "BIT Design, 265, Ramón Fernández, Punta Carretas, Montevideo, 11303, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2266,15 +2153,14 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
-        "nominatim_display_name": "Uruguay, Sagrado Corazón, Oliva, Municipio de Oliva, Pedanía Zorros, Departamento Tercero Arriba, Córdoba, X5980, Argentina",
-        "nominatim_class": "highway",
-        "experimento_error_metros": 758664.48
+        "nominatim_display_name": "Oliva, 2371, Francisco García Cortinas, Punta Carretas, Montevideo, 11303, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.5778457,
-          -32.0395711
+          -56.161011,
+          -34.9236875
         ]
       },
       "id": "node/5501820903"
@@ -2287,10 +2173,7 @@ export const puntosTuristicos = {
         "street": "Piedras",
         "city": "Montevideo",
         "country": "UY",
-        "type": "hotel",
-        "nominatim_display_name": "Don Boutique Hotel, 228,230,234,236, Piedras, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "type": "hotel"
       },
       "geometry": {
         "type": "Point",
@@ -2311,8 +2194,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Mediomundo Hostel, 1004, Juan Paullier, Parque Rodó, Montevideo, 11601, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2333,8 +2215,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Dolce Vita, 1536, Soriano, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2355,8 +2236,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo de la Casa de Gobierno, 776, Plaza Independencia, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2377,8 +2257,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Hotel Los Ángeles, 974, Avenida 18 de Julio, Barrio Sur, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2399,8 +2278,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Orpheo, 1449, Andes, Barrio Sur, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2421,8 +2299,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "museum",
         "nominatim_display_name": "Museo Numismático, 777, Avenida Int Mpal Juan P. Fabini, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2443,8 +2320,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "gallery",
         "nominatim_display_name": "Al Sur, 1368, Bartolomé Mitre, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2465,8 +2341,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo del Cannabis, 1784, Durazno, Barrio Sur, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2487,8 +2362,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "marketplace",
         "nominatim_display_name": "Galería del Notariado, 1730, Avenida 18 de Julio, Cordón, Montevideo, 11200, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2509,8 +2383,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Casa Quinta de Luis Alberto de Herrera, 3760, Avenida Luis Alberto de Herrera, Brazo Oriental, Montevideo, 11700, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2531,8 +2404,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo de Artes Decorativas \"Palacio Taranco\", 376, 25 de Mayo, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2553,8 +2425,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Nacional de Historia Natural, 1825, Miguelete, Villa Muñoz, Montevideo, 11800, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2575,8 +2446,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Espacio de Arte Contemporáneo, 1930, Arenal Grande, Villa Muñoz, Montevideo, 11800, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2595,10 +2465,7 @@ export const puntosTuristicos = {
         "street": "San José",
         "city": "Montevideo",
         "country": "UY",
-        "type": "hotel",
-        "nominatim_display_name": "Richmond, 1034, San José, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "type": "hotel"
       },
       "geometry": {
         "type": "Point",
@@ -2619,8 +2486,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "library",
         "nominatim_display_name": "Espacio Cultural Bibliobarrio, 1275, Enriqueta Compte y Rique, Arroyo Seco, Montevideo, 11800, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2641,8 +2507,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Residencia Estudiantil, 2764, Avenida Burgues, Reducto, Montevideo, 11800, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2663,8 +2528,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "museum",
         "nominatim_display_name": "Romantio, 434, 25 de Mayo, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2685,8 +2549,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hostel",
         "nominatim_display_name": "Aldeas Infantiles SOS, 10204, Avenida Luis Batlle Berres, Santiago Vázquez, Montevideo, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2707,8 +2570,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Asociación Cultural Cuareim 1080, 1194, Carlos Gardel, Barrio Sur, Montevideo, 11114, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2729,8 +2591,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Centro Cultural La Calenda, 1025, Río Negro, Barrio Sur, Montevideo, 11110, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2751,8 +2612,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hotel",
         "nominatim_display_name": "Hispanico hotel, 1317, Convención, Barrio Sur, Montevideo, 11110, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2773,8 +2633,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hotel",
         "nominatim_display_name": "Coliving Zag Pocitos, 783, Juan Benito Blanco, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2795,8 +2654,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Asociación de Integración Cultural Tangó, 1030, Curuguaty, Barrio Sur, Montevideo, 11114, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "office"
       },
       "geometry": {
         "type": "Point",
@@ -2817,8 +2675,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Centro Cultural Urbano, 1190, Paraguay, Barrio Sur, Montevideo, 11110, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2839,8 +2696,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Espacio Cultural Edificio Artigas, 487, Rincón, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -2861,8 +2717,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Centro Cultural de España, 629, Rincón, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2883,8 +2738,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Centro Cultural de Música, 1445, Juan Carlos Gómez, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2905,8 +2759,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Afroumbandismo Verde, 1426, Soriano, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2927,8 +2780,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Asociación Cultural y Social Uruguay Negro | ACSUN, 1142, Lorenzo Carnelli, Palermo, Montevideo, 11200, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2949,8 +2801,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "arts_centre",
         "nominatim_display_name": "Casa de la Cultura Afrouruguaya, 1645, Isla de Flores, Palermo, Montevideo, 11200, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2971,8 +2822,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "theatre",
         "nominatim_display_name": "Teatro Sala Verdi, 914, Soriano, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -2993,8 +2843,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hostel",
         "nominatim_display_name": "Youki Haus, 2248, San Salvador, Parque Rodó, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3015,8 +2864,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Gema Luxury Suites, 644, Roque Graseras, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3037,8 +2885,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Mercure Hotel, 371, Rambla Mahatma Gandhi, Punta Carretas, Montevideo, 11303, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3059,8 +2906,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "theatre",
         "nominatim_display_name": "Teatro Circular, 1388, Avenida General Rondeau, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -3081,8 +2927,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo Pedagógico José Pedro Varela, 1175, Doctora Adela Reta, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3103,8 +2948,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Merit Montevideo Apart & Suites, 2769, Bulevar España, Pocitos, Montevideo, 11300, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3125,8 +2969,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Avokanto, 2077, San Salvador, Parque Rodó, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3147,8 +2990,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "library",
         "nominatim_display_name": "Biblioteca Nacional, 1790, Avenida 18 de Julio, Cordón, Montevideo, 11200, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -3169,8 +3011,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Ciudadano Suites, 2297, Goes, Tres Cruces, Montevideo, 11601, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3190,15 +3031,14 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
-        "nominatim_display_name": "Tres Cruces, Montevideo, 11601, Uruguay",
-        "nominatim_class": "place",
-        "experimento_error_metros": 68.79
+        "nominatim_display_name": "Tres Cruces, 2356, Miguelete, Tres Cruces, Montevideo, 11200, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1671127,
-          -34.892518
+          -56.1674818,
+          -34.8919785
         ]
       },
       "id": "node/11115417077"
@@ -3213,8 +3053,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hotel",
         "nominatim_display_name": "Mercosur Universitas, 2481, Avenida 8 de Octubre, Tres Cruces, Montevideo, 11601, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3235,8 +3074,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo del Azulejo, 1444, Yi, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3255,8 +3093,7 @@ export const puntosTuristicos = {
         "street": "Federico N. Abadie",
         "city": "Montevideo",
         "country": "UY",
-        "type": "hotel",
-        "experimento_error_metros": -1
+        "type": "hotel"
       },
       "geometry": {
         "type": "Point",
@@ -3275,10 +3112,7 @@ export const puntosTuristicos = {
         "street": "Avenida Luis Batlle Berres",
         "city": "Montevideo",
         "country": "UY",
-        "type": "library",
-        "nominatim_display_name": "Biblioteca Comunitaria Paco Espínola, 6585 BIS, Avenida Luis Batlle Berres, Montevideo, 12600, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "type": "library"
       },
       "geometry": {
         "type": "Point",
@@ -3299,8 +3133,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo del Observatorio Meteorológico y Astronómico, 6375, Avenida Lezica, Lezica, Montevideo, 12500, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3320,15 +3153,14 @@ export const puntosTuristicos = {
         "city": "Montevideo",
         "country": "UY",
         "type": "museum",
-        "nominatim_display_name": "Museo de las Telecomunicaciones, Paraguay, Arroyo Seco, Montevideo, 11800, Uruguay",
-        "nominatim_class": "building",
-        "experimento_error_metros": 2.45
+        "nominatim_display_name": "Museo de las Telecomunicaciones, 2055, Paraguay, Arroyo Seco, Montevideo, 11800, Uruguay",
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1941184,
-          -34.8920674
+          -56.1941027,
+          -34.8920853
         ]
       },
       "id": "node/11290950540"
@@ -3343,8 +3175,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo de la Dirección Nacional de Bomberos, 1665, Colonia, Cordón, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3365,8 +3196,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "museum",
         "nominatim_display_name": "Museo de Historia Natural Dr. Carlos Torres de la LLosa, 1427, Eduardo Acevedo, Cordón, Montevideo, 11200, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3387,8 +3217,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "theatre",
         "nominatim_display_name": "Teatro Victoria, 1479, Río Negro, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -3409,8 +3238,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hotel",
         "nominatim_display_name": "Smart Hotel Montevideo, 1240, José Germán Araújo, Barrio Sur, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3431,8 +3259,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hostel",
         "nominatim_display_name": "Casa Copada, 1183, Doctor Aquiles R. Lanza, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3451,10 +3278,7 @@ export const puntosTuristicos = {
         "street": "8 de Octobre",
         "city": null,
         "country": null,
-        "type": "theatre",
-        "nominatim_display_name": "Salla Jorge Lazaroff, 4849, Camino Maldonado, Flor de Maroñas, Montevideo, 12100, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "type": "theatre"
       },
       "geometry": {
         "type": "Point",
@@ -3475,8 +3299,7 @@ export const puntosTuristicos = {
         "country": "UY",
         "type": "hostel",
         "nominatim_display_name": "Viajero Montevideo Hostel, 1361, Bartolomé Mitre, Ciudad Vieja, Montevideo, 11000, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3497,8 +3320,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "marketplace",
         "nominatim_display_name": "Unidad Agroalimentaria Metropolitana (UAM), 6651, Camino Luis Eduardo Pérez, Montevideo, 12600, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -3519,8 +3341,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "hostel",
         "nominatim_display_name": "Alohate, 1470, Miguelete, Aguada, Montevideo, 11100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3541,8 +3362,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "theatre",
         "nominatim_display_name": "espacio teatro, 865, Mercedes, Centro, Montevideo, 11100, Uruguay",
-        "nominatim_class": "amenity",
-        "experimento_error_metros": 0
+        "nominatim_class": "amenity"
       },
       "geometry": {
         "type": "Point",
@@ -3563,8 +3383,7 @@ export const puntosTuristicos = {
         "country": null,
         "type": "museum",
         "nominatim_display_name": "MUDE - Museo Uruguayo del Escultismo, 7254, Camino Carrasco, Acosta y Lara, Carrasco Norte, Montevideo, 11500, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_class": "tourism"
       },
       "geometry": {
         "type": "Point",
@@ -3576,4 +3395,4 @@ export const puntosTuristicos = {
       "id": "node/13767551401"
     }
   ]
-};
+} as any;

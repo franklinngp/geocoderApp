@@ -12,4 +12,4 @@ export const mapConfig = {
     zoom: true,
     rotate: false,
   },
-};
+}

@@ -1,4 +1,4 @@
-export const puntosTuristicos = {
+{
   "type": "FeatureCollection",
   "name": "turismo_nominatim_experimento_uruguay",
   "features": [
@@ -148,8 +148,7 @@ export const puntosTuristicos = {
         "street": "South 1st Street",
         "city": "Montevideo",
         "country": null,
-        "type": "library",
-        "experimento_error_metros": -1
+        "type": "library"
       },
       "geometry": {
         "type": "Point",
@@ -370,22 +369,22 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Hotel Iberia",
+        "name": "Iberia",
         "housenumber": "1097",
         "street": "Maldonado",
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
         "@geometry": "center",
-        "nominatim_display_name": "Hotel Iberia, El Mesana (Calle 24), Punta Del Este, Maldonado, 20100, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 114065.34
+        "nominatim_display_name": "Iberia, Marconi, Las Acacias, Montevideo, 12300, Uruguay",
+        "nominatim_class": "highway",
+        "experimento_error_metros": 8462.41
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -54.9426408,
-          -34.9626856
+          -56.1539077,
+          -34.8403177
         ]
       },
       "id": "way/456808395"
@@ -439,22 +438,22 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Museo del Carnaval",
+        "name": "Museo de Carnaval",
         "housenumber": "218",
         "street": "Rambla 25 de Agosto de 1825",
         "city": null,
         "country": null,
         "type": "museum",
         "@geometry": "center",
-        "nominatim_display_name": "Museo del carnaval, Pasarela del Corsódromo, Barrio Agmer, Gualeguaychú, Distrito Costa Uruguay Sur, Departamento Gualeguaychú, Entre Ríos, 2820, Argentina",
+        "nominatim_display_name": "Museo de Carnaval, 218, Rambla 25 de Agosto de 1825, Ciudad Vieja, Montevideo, 11000, Uruguay",
         "nominatim_class": "tourism",
-        "experimento_error_metros": 298990.16
+        "experimento_error_metros": 2.54
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -58.5219823,
-          -33.0187125
+          -56.21217,
+          -34.9057085
         ]
       },
       "id": "way/457975586"
@@ -485,22 +484,22 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Hotel Pedro Figari",
+        "name": "Pedro Figari",
         "housenumber": "6535",
         "street": "Rambla República de México",
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
         "@geometry": "center",
-        "nominatim_display_name": "Pedro Figari, 6535, Rambla República de México, Carrasco, Montevideo, 11500, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 3.32
+        "nominatim_display_name": "Pedro Figari, Paso Carrasco, Municipio de Paso Carrasco, Canelones, 15000, Uruguay",
+        "nominatim_class": "highway",
+        "experimento_error_metros": 2758.65
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.0535022,
-          -34.8902554
+          -56.0566414,
+          -34.8656084
         ]
       },
       "id": "way/458111996"
@@ -737,22 +736,22 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Aguada Park",
+        "name": "Lugar de reunión",
         "housenumber": "2141",
         "street": "Paraguay",
         "city": "Montevideo",
         "country": null,
         "type": "park",
         "@geometry": "center",
-        "nominatim_display_name": "Aguada Park, 2141, Paraguay, Arroyo Seco, Montevideo, 11800, Uruguay",
-        "nominatim_class": "building",
-        "experimento_error_metros": 34.98
+        "nominatim_display_name": "Lugar de reunión, 2141, Arroyo Seco, Montevideo, 11100, Uruguay",
+        "nominatim_class": "leisure",
+        "experimento_error_metros": 2.32
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.194888,
-          -34.8912924
+          -56.1945143,
+          -34.8912453
         ]
       },
       "id": "way/752693775"
@@ -827,21 +826,21 @@ export const puntosTuristicos = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Hotel Lafayette",
+        "name": "Lafayette",
         "housenumber": "1170",
         "street": "Soriano",
         "city": "Montevideo",
         "country": "UY",
         "type": "hotel",
-        "nominatim_display_name": "Lafayette, 1170, Soriano, Centro, Montevideo, 11114, Uruguay",
-        "nominatim_class": "tourism",
-        "experimento_error_metros": 0
+        "nominatim_display_name": "Lafayette, Sayago, Montevideo, 12900, Uruguay",
+        "nominatim_class": "highway",
+        "experimento_error_metros": 8656.89
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -56.1907174,
-          -34.9078432
+          -56.206307,
+          -34.8310478
         ]
       },
       "id": "node/807268183"
@@ -3255,8 +3254,7 @@ export const puntosTuristicos = {
         "street": "Federico N. Abadie",
         "city": "Montevideo",
         "country": "UY",
-        "type": "hotel",
-        "experimento_error_metros": -1
+        "type": "hotel"
       },
       "geometry": {
         "type": "Point",
@@ -3576,4 +3574,4 @@ export const puntosTuristicos = {
       "id": "node/13767551401"
     }
   ]
-};
+}
