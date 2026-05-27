@@ -27,6 +27,7 @@ import { puntosTuristicos } from '../../../data/puntosTuristicos';
 import { puntosGeocodificados } from '../../../data/puntosGeocodificados';
 import Icon from 'ol/style/Icon';
 import Overlay from 'ol/Overlay';
+import Feature from 'ol/Feature';
 import type { FeatureLike } from 'ol/Feature';
 import type MapBrowserEvent from 'ol/MapBrowserEvent';
 import { getCenter } from 'ol/extent';
@@ -48,6 +49,33 @@ export class MapComponent implements AfterViewInit {
 
   popupRef = viewChild<ElementRef<HTMLElement>>('popup');
   popupOverlay?: Overlay;
+
+  private irUbicacionReal(featureId: string | number | null, puntosTuristicosSource: VectorSource): void {
+    if (!this.map || featureId == null) {
+      return;
+    }
+
+    const realFeature = puntosTuristicosSource.getFeatureById(featureId);
+    if (!realFeature) {
+      return;
+    }
+
+    const geometry = realFeature.getGeometry();
+    if (!geometry) {
+      return;
+    }
+
+    const coordinate =
+      geometry instanceof Point
+        ? geometry.getCoordinates()
+        : getCenter(geometry.getExtent());
+
+    this.map.getView().animate({
+      center: coordinate,
+      duration: 500,
+      zoom: 18,
+    });
+  }
 
   ngAfterViewInit(): void {
     const element = this.mapRef()?.nativeElement;
@@ -196,7 +224,7 @@ this.map.addLayer(capaDepartamentos);
 
     this.map.addLayer(puntosTuristicosLayer);
 
-    // capa nominatim (puntos geocodificados)
+    // capa nominatim 
     const nominatimSource = new VectorSource({
       features: new GeoJSON().readFeatures(puntosGeocodificados, {
         dataProjection: 'EPSG:4326',
@@ -247,19 +275,21 @@ this.map.addLayer(capaDepartamentos);
       element: popupEl,
       positioning: 'bottom-center',
       offset: [5, -12],
-      stopEvent: false,
+      stopEvent: true,
     });
     this.map.addOverlay(this.popupOverlay);
 
     this.map.on('click', (event: MapBrowserEvent) => {
-      const feature = this.map?.forEachFeatureAtPixel(
+      const hit = this.map?.forEachFeatureAtPixel(
         event.pixel,
-        (f: FeatureLike) => f,
+        (f: FeatureLike, layer) => ({ feature: f, layer }),
         {
           hitTolerance: 8,
-          layerFilter: (layer) => layer === puntosTuristicosLayer,
         },
       );
+
+      const feature = hit?.feature as Feature | undefined;
+      const layer = hit?.layer;
 
       if (!feature) {
         this.popupOverlay?.setPosition(undefined);
@@ -271,18 +301,35 @@ this.map.addLayer(capaDepartamentos);
       const geometry = feature.getGeometry();
       if (!geometry) return;
 
+      const isNominatim = layer?.get('name') === 'nominatim';
+      const coordinate =
+        geometry instanceof Point
+          ? geometry.getCoordinates()
+          : getCenter(geometry.getExtent());
+
       popupEl.innerHTML = `
-        <strong>${props['name'] ?? 'Sin nombre'}</strong><br>
-        ${props['street'] ?? ''} ${props['housenumber'] ?? ''}<br>
-        ${props['city'] ?? ''}
+        <div class="space-y-2">
+          <div>
+            <strong>${props['name'] ?? 'Sin nombre'}</strong><br>
+            ${props['street'] ?? ''} ${props['housenumber'] ?? ''}<br>
+            ${props['city'] ?? ''}
+          </div>
+          ${isNominatim ? '<button id="view-real-location" class="btn btn-sm btn-primary">Ver ubicacion real</button>' : ''}
+        </div>
       `;
 
-      const coordinate =
-      geometry instanceof Point
-        ? geometry.getCoordinates()
-        : getCenter(geometry.getExtent());
-    this.popupOverlay?.setPosition(coordinate);
-    popupEl.classList.remove('hidden');
+      if (isNominatim) {
+        const button = popupEl.querySelector('#view-real-location');
+        const featureId = feature.getId() ?? props['id'];
+        button?.addEventListener('click', (clickEvent) => {
+          clickEvent.stopPropagation();
+          clickEvent.preventDefault();
+          this.irUbicacionReal(featureId, puntosTuristicosSource);
+        });
+      }
+
+      this.popupOverlay?.setPosition(coordinate);
+      popupEl.classList.remove('hidden');
     });
 
 

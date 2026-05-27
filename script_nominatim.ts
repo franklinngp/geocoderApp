@@ -4,8 +4,7 @@ import { puntosTuristicos } from './src/app/data/puntosTuristicos';
 
 const USER_AGENT = 'MiAppTurismoMontevideo/1.0';
 
-// RUTA DE SALIDA: Apunta directamente al archivo .ts dentro de tu proyecto Angular
-// Nota: Si la carpeta exacta es 'data' o 'services', asegúrate de que coincida con tu estructura.
+
 const OUTPUT_TS_FILE = path.join(__dirname, 'src', 'app', 'data', 'puntosTuristicos.ts');
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -27,7 +26,7 @@ interface Feature {
   id: string;
 }
 
-// Función para calcular la distancia en metros entre dos coordenadas (Fórmula de Haversine)
+// para calcular la distancia en metros entre dos coordenadas
 function calcularDistanciaMetros(lat1: number, lon1: number, lat2: number, lon2: number): number {
   const R = 6371e3; // Radio de la Tierra en metros
   const phi1 = (lat1 * Math.PI) / 180;
@@ -41,14 +40,14 @@ function calcularDistanciaMetros(lat1: number, lon1: number, lat2: number, lon2:
   
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-  return R * c; // Distancia en metros
+  return R * c; 
 }
 
 async function geocodeAll() {
   const features = puntosTuristicos.features as Feature[];
   const updatedFeatures: Feature[] = [];
 
-  // Variables para las métricas globales del experimento
+
   let puntosEncontrados = 0;
   let sumaDistancias = 0;
   const distancias: number[] = [];
@@ -60,12 +59,11 @@ async function geocodeAll() {
     const props = feature.properties;
     const name = props.name || '';
 
-    // Filtro de búsqueda: Solo nombre del punto + Uruguay
+    // Aca es lo que se le pasa a Nominatim
     const searchQuery = `${name.trim()}, Uruguay`;
 
     console.log(`[${i + 1}/${features.length}] Buscando: "${searchQuery}"...`);
 
-    // Coordenadas originales del archivo (punto de control real)
     const [originalLon, originalLat] = feature.geometry.coordinates;
 
     try {
@@ -86,7 +84,6 @@ async function geocodeAll() {
         const lonPredicho = parseFloat(prediction.lon);
         const latPredicho = parseFloat(prediction.lat);
 
-        // Calcular el margen de error métrico con Haversine
         let distanciaErrorMedida = 0;
         if (originalLat && originalLon) {
           distanciaErrorMedida = calcularDistanciaMetros(originalLat, originalLon, latPredicho, lonPredicho);
@@ -94,8 +91,6 @@ async function geocodeAll() {
           distancias.push(distanciaErrorMedida);
           puntosEncontrados++;
         }
-
-        // Clonamos la Feature insertando la nueva geometría de Nominatim y la métrica de error
         const updatedFeature = {
           ...feature,
           geometry: {
@@ -106,7 +101,6 @@ async function geocodeAll() {
             ...feature.properties,
             nominatim_display_name: prediction.display_name,
             nominatim_class: prediction.class,
-            // Guardamos el error de metros directo en las propiedades del objeto
             experimento_error_metros: Math.round(distanciaErrorMedida * 100) / 100 
           }
         };
@@ -116,12 +110,11 @@ async function geocodeAll() {
       } else {
         console.warn(`   ❌ Sin resultados para: "${searchQuery}". Manteniendo coordenadas originales.`);
         
-        // Si no se encuentra, mantenemos la estructura inyectando error nulo o alto para identificarlo
         const updatedFeature = {
           ...feature,
           properties: {
             ...feature.properties,
-            experimento_error_metros: -1 // -1 significará que Nominatim no lo encontró
+            experimento_error_metros: -1 // -1 significa que Nominatim no lo encontró
           }
         };
         updatedFeatures.push(updatedFeature);
@@ -132,7 +125,7 @@ async function geocodeAll() {
       updatedFeatures.push(feature);
     }
 
-    // Mantener la espera obligatoria de 1.5s para no saturar a OpenStreetMap
+    // se hace con espera para no saturar a pedidos
     await delay(1500);
   }
 
@@ -146,9 +139,8 @@ async function geocodeAll() {
   // Convertimos el objeto en una cadena de texto de código TypeScript exportable
   const tsContent = `export const puntosTuristicos = ${JSON.stringify(finalGeoJSON, null, 2)};\n`;
 
-  // Escribimos (y reemplazamos) el archivo directamente en la carpeta de Angular
   fs.writeFileSync(OUTPUT_TS_FILE, tsContent, 'utf-8');
-  console.log(`\n Transpilación exitosa. Archivo TypeScript actualizado en: ${OUTPUT_TS_FILE}`);
+  console.log(`\n  Todo bien! Archivo actualizado en: ${OUTPUT_TS_FILE}`);
   
   // --- IMPRESIÓN DEL REPORTE FINAL ---
   console.log(`\n==================================================`);
@@ -164,7 +156,7 @@ async function geocodeAll() {
 
     console.log(`• Tasa de efectividad de búsqueda: ${((puntosEncontrados / features.length) * 100).toFixed(1)}%`);
     console.log(`• Error promedio general: ${promedioError.toFixed(2)} metros`);
-    console.log(`• Mediana del error (Caso típico): ${medianaError.toFixed(2)} metros`);
+    console.log(`• Error medio (Caso típico): ${medianaError.toFixed(2)} metros`);
     console.log(`• Desviación mínima (Mejor caso): ${distancias[0].toFixed(2)} metros`);
     console.log(`• Desviación máxima (Peor caso): ${distancias[distancias.length - 1].toFixed(2)} metros`);
   } else {
