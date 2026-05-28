@@ -6,7 +6,14 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:cases": "tsx scripts/build-cases.ts",
+    "compare:nominatim": "tsx scripts/run-comparison.ts --geocoder nominatim",
+    "compare:nominatim:test": "tsx scripts/run-comparison.ts --geocoder nominatim --limit 5",
+    "compare:photon": "tsx scripts/run-comparison.ts --geocoder photon",
+    "compare:photon:test": "tsx scripts/run-comparison.ts --geocoder photon --limit 5",
+    "compare:arcgis": "tsx scripts/run-comparison.ts --geocoder arcgis",
+    "compare:arcgis:test": "tsx scripts/run-comparison.ts --geocoder arcgis --limit 5"
   },
   "private": true,
   "packageManager": "npm@11.8.0",
@@ -31,7 +38,9 @@
     "postcss": "^8.5.3",
     "prettier": "^3.8.1",
     "tailwindcss": "^4.1.12",
+    "tsx": "^4.20.3",
     "typescript": "~5.9.2",
+    "@types/node": "^22.15.0",
     "vitest": "^4.0.8"
   }
 }

@@ -1,5 +1,16 @@
-<header class="flex flex-row items-center justify-between h-[8vh] w-full px-4 shadow-md" >
-  <div class="flex flex-row items-center gap-2">
+<header class="flex flex-row items-center justify-between h-[8vh] w-full px-4 shadow-md">
+  <div class="flex flex-row items-center gap-2 flex-wrap">
+    <select
+      class="select select-bordered select-sm max-w-[11rem]"
+      [value]="geocoderService.selectedId()"
+      (change)="onGeocoderChange($event)"
+      aria-label="Geocoder"
+    >
+      @for (opt of geocoderService.options; track opt.id) {
+        <option [value]="opt.id">{{ opt.label }}</option>
+      }
+    </select>
+
     <label class="input">
       <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g
@@ -13,12 +24,26 @@
           <path d="m21 21-4.3-4.3"></path>
         </g>
       </svg>
-      <input type="search" class="grow" placeholder="Search" #searchInput/>
-      
+      <input
+        type="search"
+        class="grow"
+        placeholder="Buscar dirección…"
+        #searchInput
+        (keydown.enter)="buscarDireccion()"
+      />
     </label>
-    <button class="btn btn-primary" (click)="buscarDireccion()">Buscar</button>
-  </div>
-    
-      <h1 class='font-bold text-2xl'>GeocoderApp</h1>
 
+    <button
+      class="btn btn-primary"
+      (click)="buscarDireccion()"
+      [disabled]="geocoderService.searching()"
+    >
+      @if (geocoderService.searching()) {
+        <span class="loading loading-spinner loading-sm"></span>
+      }
+      Buscar
+    </button>
+  </div>
+
+  <h1 class="font-bold text-2xl">GeocoderApp</h1>
 </header>

@@ -4,6 +4,7 @@ import Map from 'ol/Map';
 import Point from 'ol/geom/Point';
 import { fromLonLat } from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
+import type { GeocodeHit, GeocoderId } from '../geocoding/geocoder.types';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,9 @@ import VectorSource from 'ol/source/Vector';
 export class MapService {
   mapRef = signal<Map | null>(null);
   searchSource = signal<VectorSource | null>(null);
-  datosBusquedaNominatim = signal<any[]>([]);
+  lastSearchHit = signal<GeocodeHit | null>(null);
+  lastSearchGeocoder = signal<GeocoderId | null>(null);
+  searchError = signal<string | null>(null);
   coordenadasCursor = signal<{ lon: number; lat: number } | null>(null);
 
   setSearchMarker(lon: number, lat: number): void {

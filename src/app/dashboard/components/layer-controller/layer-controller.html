@@ -113,12 +113,19 @@
       </label>
     </div>
     <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">
-      <p class="font-bold">Datos de la búsqueda</p>
-      <div class="flex flex-col gap-2">
-        <p>{{ datosBusquedaNominatim()[0]?.display_name ?? 'No hay datos de la búsqueda'}}</p>
-        <p>{{ datosBusquedaNominatim()[0]?.lat ?? 'No hay datos de la búsqueda' }}</p>
-        <p>{{ datosBusquedaNominatim()[0]?.lon ?? 'No hay datos de la búsqueda' }}</p>
-      </div>
+      <p class="font-bold">Búsqueda</p>
+      <p class="text-xs text-base-content/70">
+        Geocoder: {{ geocoderLabel(lastSearchGeocoder()) }}
+      </p>
+      @if (searchError(); as err) {
+        <p class="text-error text-sm">{{ err }}</p>
+      } @else if (lastSearchHit(); as hit) {
+        <p class="text-sm">{{ hit.displayName }}</p>
+        <p class="text-sm">Lat: {{ hit.lat.toFixed(5) }}</p>
+        <p class="text-sm">Lon: {{ hit.lon.toFixed(5) }}</p>
+      } @else {
+        <p class="text-base-content/60 text-sm">Sin búsqueda reciente</p>
+      }
     </div>
     <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">
       <p class="font-bold">Coordenadas del cursor</p>

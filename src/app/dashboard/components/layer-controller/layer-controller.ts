@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { GeocoderService } from '../../../geocoding/geocoder.service';
 import { MapService } from '../../map-service';
 
 @Component({
@@ -7,11 +8,18 @@ import { MapService } from '../../map-service';
   templateUrl: './layer-controller.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LayerController { 
-
+export class LayerController {
   mapService = inject(MapService);
-  datosBusquedaNominatim = this.mapService.datosBusquedaNominatim;
+  geocoderService = inject(GeocoderService);
+  lastSearchHit = this.mapService.lastSearchHit;
+  lastSearchGeocoder = this.mapService.lastSearchGeocoder;
+  searchError = this.mapService.searchError;
   coordenadasCursor = this.mapService.coordenadasCursor;
+
+  geocoderLabel(id: string | null): string {
+    if (!id) return '—';
+    return this.geocoderService.options.find((o) => o.id === id)?.label ?? id;
+  }
 
   verificar_visibilidad() {
     return this.mapService.mapRef()?.getLayers().getArray().find((layer) => layer.get('name') === 'layer_ide')?.getVisible();

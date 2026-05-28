@@ -1,0 +1,2905 @@
+{
+  "generated_at": "2026-05-27T22:02:54.575Z",
+  "source": "D:\\TSIG\\turismo_filtrado.geojson",
+  "count": 161,
+  "cases": [
+    {
+      "id": "way/82094010",
+      "name": "Zoológico Villa Dolores",
+      "ref_lon": -56.1450867,
+      "ref_lat": -34.9009082,
+      "street": "Avenida General Rivera",
+      "housenumber": "3245",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "park",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida General Rivera 3245, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/175956021",
+      "name": "Museo Nacional de Artes Visuales",
+      "ref_lon": -56.1649676,
+      "ref_lat": -34.9138756,
+      "street": "Avenida Tomás Giribaldi",
+      "housenumber": "2283",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Tomás Giribaldi 2283, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/180398319",
+      "name": "Parque de la Amistad",
+      "ref_lon": -56.1447914,
+      "ref_lat": -34.9021728,
+      "street": "Avenida General Rivera",
+      "housenumber": "3245",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "park",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida General Rivera 3245, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/231952139",
+      "name": "Mercado Agrícola de Montevideo",
+      "ref_lon": -56.1833664,
+      "ref_lat": -34.8868898,
+      "street": "José L. Terra",
+      "housenumber": "2220",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "marketplace",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "José L. Terra 2220, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/361286129",
+      "name": "Regency Way",
+      "ref_lon": -56.1416946,
+      "ref_lat": -34.9016427,
+      "street": "Avenida General Rivera",
+      "housenumber": "3377",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida General Rivera 3377, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/361341220",
+      "name": "Hotel Ibis",
+      "ref_lon": -56.1824361,
+      "ref_lat": -34.9140595,
+      "street": "La Cumparsita",
+      "housenumber": "1473",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "La Cumparsita 1473, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/367062240",
+      "name": "Montevideo Public Library",
+      "ref_lon": -95.7238488,
+      "ref_lat": 44.9448935,
+      "street": "South 1st Street",
+      "housenumber": "224",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "library",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "South 1st Street 224, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/440756997",
+      "name": "CAMBADU",
+      "ref_lon": -56.187947,
+      "ref_lat": -34.8586011,
+      "street": "Avenida Luis Alberto de Herrera",
+      "housenumber": "4196",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "park",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Luis Alberto de Herrera 4196, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/455157719",
+      "name": "Continental Senior",
+      "ref_lon": -56.1927554,
+      "ref_lat": -34.9055749,
+      "street": "Paraguay",
+      "housenumber": "1373",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Paraguay 1373, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/455778403",
+      "name": "Hotel América",
+      "ref_lon": -56.1933624,
+      "ref_lat": -34.9064829,
+      "street": "Río Negro",
+      "housenumber": "1330",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Río Negro 1330, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/455827508",
+      "name": "Gran Teatro Metro",
+      "ref_lon": -56.1899569,
+      "ref_lat": -34.9065012,
+      "street": "San José",
+      "housenumber": "1211",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "San José 1211, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/455829524",
+      "name": "Klee",
+      "ref_lon": -56.1876908,
+      "ref_lat": -34.9064976,
+      "street": "San José",
+      "housenumber": "1303",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "San José 1303, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/455840282",
+      "name": "Dazzler Hotel Montevideo",
+      "ref_lon": -56.1574387,
+      "ref_lat": -34.9179502,
+      "street": "21 de Setiembre",
+      "housenumber": "2752",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "21 de Setiembre 2752, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/456271463",
+      "name": "Galería de las Misiones",
+      "ref_lon": -56.2063644,
+      "ref_lat": -34.9062466,
+      "street": "25 de Mayo",
+      "housenumber": "464",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "gallery",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "25 de Mayo 464, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/456687616",
+      "name": "Hotel Mediterráneo",
+      "ref_lon": -56.1925398,
+      "ref_lat": -34.9035053,
+      "street": "Paraguay",
+      "housenumber": "1486",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Paraguay 1486, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/456797884",
+      "name": "London Palace Hotel",
+      "ref_lon": -56.1932214,
+      "ref_lat": -34.9074411,
+      "street": "Río Negro",
+      "housenumber": "1278",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Río Negro 1278, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/456808395",
+      "name": "Iberia",
+      "ref_lon": -56.1922849,
+      "ref_lat": -34.9096039,
+      "street": "Maldonado",
+      "housenumber": "1097",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Maldonado 1097, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/456821600",
+      "name": "El Tinglado",
+      "ref_lon": -56.172226,
+      "ref_lat": -34.8990798,
+      "street": "Colonia",
+      "housenumber": "2035",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Colonia 2035, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/457278135",
+      "name": "Holiday Inn",
+      "ref_lon": -56.1988806,
+      "ref_lat": -34.9053224,
+      "street": "Colonia",
+      "housenumber": "823",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Colonia 823, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/457975586",
+      "name": "Museo de Carnaval",
+      "ref_lon": -56.2121678,
+      "ref_lat": -34.9057313,
+      "street": "Rambla 25 de Agosto de 1825",
+      "housenumber": "218",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rambla 25 de Agosto de 1825 218, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/457980362",
+      "name": "Museo de Arte Precolombino e Indígena",
+      "ref_lon": -56.2101138,
+      "ref_lat": -34.9071541,
+      "street": "25 de Mayo",
+      "housenumber": "279",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "25 de Mayo 279, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/458111996",
+      "name": "Pedro Figari",
+      "ref_lon": -56.0534859,
+      "ref_lat": -34.8902821,
+      "street": "Rambla República de México",
+      "housenumber": "6535",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rambla República de México 6535, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/458152269",
+      "name": "Hotel Escuela",
+      "ref_lon": -56.1662904,
+      "ref_lat": -34.8770963,
+      "street": "Bulevar General Artigas",
+      "housenumber": "2714",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Bulevar General Artigas 2714, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/458153513",
+      "name": "Palladium Business Hotel",
+      "ref_lon": -56.1327766,
+      "ref_lat": -34.9041094,
+      "street": "Tomás de Tezanos",
+      "housenumber": "1146",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Tomás de Tezanos 1146, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/458767840",
+      "name": "Hyatt Centric",
+      "ref_lon": -56.1384238,
+      "ref_lat": -34.9095323,
+      "street": "Rambla República del Perú",
+      "housenumber": "1479",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rambla República del Perú 1479, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/458774567",
+      "name": "Armon Suites",
+      "ref_lon": -56.1545198,
+      "ref_lat": -34.9190639,
+      "street": "21 de Setiembre",
+      "housenumber": "2885",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "21 de Setiembre 2885, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/459215776",
+      "name": "Regency Golf",
+      "ref_lon": -56.1597069,
+      "ref_lat": -34.9223326,
+      "street": "Francisco Solano García",
+      "housenumber": "2473",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Francisco Solano García 2473, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/460085472",
+      "name": "After Hotel",
+      "ref_lon": -56.1325825,
+      "ref_lat": -34.9037024,
+      "street": "Arturo Prat",
+      "housenumber": "3755",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Arturo Prat 3755, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/567042742",
+      "name": "Ateneo",
+      "ref_lon": -56.1911331,
+      "ref_lat": -34.905216,
+      "street": "Plaza Cagancha",
+      "housenumber": "1157",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Plaza Cagancha 1157, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/586011503",
+      "name": "Centro Cultural Florencio Sánchez",
+      "ref_lon": -56.247987,
+      "ref_lat": -34.8922788,
+      "street": "Grecia",
+      "housenumber": "3281",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Grecia 3281, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/600332214",
+      "name": "Synergia Golf",
+      "ref_lon": -56.1614142,
+      "ref_lat": -34.9224774,
+      "street": "Doctor Héctor Miranda",
+      "housenumber": "2361",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Doctor Héctor Miranda 2361, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/717011521",
+      "name": "Francisco Schinca",
+      "ref_lon": -56.1344341,
+      "ref_lat": -34.8686086,
+      "street": "Avenida 8 de Octubre",
+      "housenumber": "4210",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "library",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida 8 de Octubre 4210, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/752693775",
+      "name": "Lugar de reunión",
+      "ref_lon": -56.1945059,
+      "ref_lat": -34.891265,
+      "street": "Paraguay",
+      "housenumber": "2141",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "park",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Paraguay 2141, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/755949428",
+      "name": "Museo Naval",
+      "ref_lon": -56.1360302,
+      "ref_lat": -34.9106553,
+      "street": "Rambla Presidente Charles de Gaulle",
+      "housenumber": "1555",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rambla Presidente Charles de Gaulle 1555, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/807251957",
+      "name": "Casa de Fructuoso Rivera",
+      "ref_lon": -56.2066155,
+      "ref_lat": -34.9070064,
+      "street": "Rincón",
+      "housenumber": "437",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rincón 437, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/807252331",
+      "name": "Casa de Antonio Montero",
+      "ref_lon": -56.2070091,
+      "ref_lat": -34.9064142,
+      "street": "25 de Mayo",
+      "housenumber": "428",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "25 de Mayo 428, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/807268183",
+      "name": "Lafayette",
+      "ref_lon": -56.1907174,
+      "ref_lat": -34.9078432,
+      "street": "Soriano",
+      "housenumber": "1170",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Soriano 1170, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/807269158",
+      "name": "Museo de Historia del Arte",
+      "ref_lon": -56.1865331,
+      "ref_lat": -34.9062399,
+      "street": "Ejido",
+      "housenumber": "1326",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Ejido 1326, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/918873087",
+      "name": "Regency Suites",
+      "ref_lon": -56.0575754,
+      "ref_lat": -34.8895158,
+      "street": "Doctor Gabriel Otero",
+      "housenumber": "6428",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Doctor Gabriel Otero 6428, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/944054070",
+      "name": "Puerto Mercado Hotel",
+      "ref_lon": -56.2106948,
+      "ref_lat": -34.9066767,
+      "street": "Cerrito",
+      "housenumber": "262,264,266",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Cerrito 262,264,266, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/944530752",
+      "name": "Cattivelli Hnos. S.A.",
+      "ref_lon": -56.2001927,
+      "ref_lat": -34.8790316,
+      "street": "Eduardo Dionisio Carbajal",
+      "housenumber": "2767,2775,2779",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "marketplace",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Eduardo Dionisio Carbajal 2767,2775,2779, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/944818027",
+      "name": "Rambler Hostels",
+      "ref_lon": -56.1385321,
+      "ref_lat": -34.9050824,
+      "street": "Luis Lamas",
+      "housenumber": "3452",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Luis Lamas 3452, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/944824860",
+      "name": "Quijano Hotel",
+      "ref_lon": -56.1890778,
+      "ref_lat": -34.9070409,
+      "street": "Carlos Quijano",
+      "housenumber": "1281",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Carlos Quijano 1281, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/945599447",
+      "name": "Bob Marley",
+      "ref_lon": -56.163909,
+      "ref_lat": -34.8785575,
+      "street": "Ingavi",
+      "housenumber": "2663",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "artwork",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Ingavi 2663, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/956122992",
+      "name": "Museo Gurvich",
+      "ref_lon": -56.204295,
+      "ref_lat": -34.9074751,
+      "street": "Sarandí",
+      "housenumber": "524",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Sarandí 524, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/1086460679",
+      "name": "ibis Styles Montevideo Biarritz",
+      "ref_lon": -56.1567563,
+      "ref_lat": -34.9178924,
+      "street": "21 de Setiembre",
+      "housenumber": "2783",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "21 de Setiembre 2783, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/1164968496",
+      "name": "Planetario de Montevideo \"Agrimensor Germán Barbato\"",
+      "ref_lon": -56.1445313,
+      "ref_lat": -34.9018806,
+      "street": "Avenida General Rivera",
+      "housenumber": "3275",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "attraction",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida General Rivera 3275, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/1167139189",
+      "name": "Radisson Montevideo Victoria Plaza Hotel",
+      "ref_lon": -56.1995694,
+      "ref_lat": -34.9058186,
+      "street": "Plaza Independencia",
+      "housenumber": "759",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Plaza Independencia 759, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "way/1218272271",
+      "name": "Club de Baby Futbol Estrella Federal",
+      "ref_lon": -56.2288669,
+      "ref_lat": -34.8368088,
+      "street": "Isidro Pérez de Roxas",
+      "housenumber": "sn",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "park",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Isidro Pérez de Roxas sn, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/1645755421",
+      "name": "Sala La Experimental",
+      "ref_lon": -56.0993731,
+      "ref_lat": -34.8929892,
+      "street": "Doctor Decroly",
+      "housenumber": "5071",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Doctor Decroly 5071, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/1943212217",
+      "name": "Museo Nacional de Antropología",
+      "ref_lon": -56.1999532,
+      "ref_lat": -34.8450435,
+      "street": "Avenida de las Instrucciones",
+      "housenumber": "948",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida de las Instrucciones 948, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2434315186",
+      "name": "Che Lagarto",
+      "ref_lon": -56.1713776,
+      "ref_lat": -34.8988155,
+      "street": "Colonia",
+      "housenumber": "2063",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Colonia 2063, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2501658654",
+      "name": "Balmoral Plaza Hotel",
+      "ref_lon": -56.1918546,
+      "ref_lat": -34.9065459,
+      "street": "Circunvalación Doctor Enrique Tarigo",
+      "housenumber": "1126",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Circunvalación Doctor Enrique Tarigo 1126, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2568442374",
+      "name": "Museo Casa de Juan Zorrilla de San Martín",
+      "ref_lon": -56.1597694,
+      "ref_lat": -34.9276332,
+      "street": "José Luis Zorrilla de San Martín",
+      "housenumber": "96",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "José Luis Zorrilla de San Martín 96, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2577786969",
+      "name": "My Suites Hotel",
+      "ref_lon": -56.1510297,
+      "ref_lat": -34.919623,
+      "street": "Juan Benito Blanco",
+      "housenumber": "674",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Juan Benito Blanco 674, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2582212708",
+      "name": "Willy Fogg",
+      "ref_lon": -56.1949825,
+      "ref_lat": -34.909848,
+      "street": "Maldonado",
+      "housenumber": "977",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Maldonado 977, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2640796932",
+      "name": "Splendido Hotel",
+      "ref_lon": -56.2015882,
+      "ref_lat": -34.9073396,
+      "street": "Bartolomé Mitre",
+      "housenumber": "1314",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Bartolomé Mitre 1314, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2670736298",
+      "name": "Museo Castillo Pittamiglio",
+      "ref_lon": -56.1498324,
+      "ref_lat": -34.9209902,
+      "street": "Rambla Mahatma Gandhi",
+      "housenumber": "633",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rambla Mahatma Gandhi 633, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/2885782967",
+      "name": "Castillo Idiarte Borda",
+      "ref_lon": -56.2320704,
+      "ref_lat": -34.8021164,
+      "street": "Avenida Lezica",
+      "housenumber": "5912",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "attraction",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Lezica 5912, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/3000665176",
+      "name": "Museo Torres García",
+      "ref_lon": -56.2013757,
+      "ref_lat": -34.9064601,
+      "street": "Sarandí",
+      "housenumber": "683",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Sarandí 683, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/3071001096",
+      "name": "Museo del Gaucho y la Moneda",
+      "ref_lon": -56.2086267,
+      "ref_lat": -34.9056499,
+      "street": "Cerrito",
+      "housenumber": "351",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Cerrito 351, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/3128261290",
+      "name": "Hotel Aramaya",
+      "ref_lon": -56.1922667,
+      "ref_lat": -34.9058353,
+      "street": "Avenida 18 de Julio",
+      "housenumber": "1103",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida 18 de Julio 1103, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/3197655861",
+      "name": "Hotel Palacio",
+      "ref_lon": -56.2020851,
+      "ref_lat": -34.9063117,
+      "street": "Bartolomé Mitre",
+      "housenumber": "1364",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Bartolomé Mitre 1364, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/3200111661",
+      "name": "Alvear",
+      "ref_lon": -56.1890262,
+      "ref_lat": -34.9052772,
+      "street": "Yi",
+      "housenumber": "1372,1374",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Yi 1372,1374, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/3874237902",
+      "name": "Massini Suites",
+      "ref_lon": -56.1495742,
+      "ref_lat": -34.9108077,
+      "street": "Ramón Masini",
+      "housenumber": "3288",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Ramón Masini 3288, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4119113191",
+      "name": "Regency Rambla",
+      "ref_lon": -56.0635506,
+      "ref_lat": -34.8979014,
+      "street": "Rambla República de México",
+      "housenumber": "6079",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rambla República de México 6079, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4119717798",
+      "name": "Pocitos Plaza",
+      "ref_lon": -56.1512972,
+      "ref_lat": -34.9204089,
+      "street": "Juan Benito Blanco",
+      "housenumber": "640",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Juan Benito Blanco 640, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4127310294",
+      "name": "Museo de la Memoria",
+      "ref_lon": -56.1985539,
+      "ref_lat": -34.8421233,
+      "street": "Avenida de las Instrucciones",
+      "housenumber": "1057",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida de las Instrucciones 1057, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4145239389",
+      "name": "AXSUR",
+      "ref_lon": -56.2050299,
+      "ref_lat": -34.9093446,
+      "street": "Misiones",
+      "housenumber": "1260",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Misiones 1260, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4175992389",
+      "name": "Museo Andes 1972",
+      "ref_lon": -56.2029127,
+      "ref_lat": -34.9058511,
+      "street": "Rincón",
+      "housenumber": "619",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rincón 619, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4194450019",
+      "name": "Buenas Vibras Hostel",
+      "ref_lon": -56.1701221,
+      "ref_lat": -34.9080432,
+      "street": "Maldonado",
+      "housenumber": "2077",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Maldonado 2077, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4232064203",
+      "name": "Auditorio Nacional \"Adela Reta\"",
+      "ref_lon": -56.198708,
+      "ref_lat": -34.9042808,
+      "street": "Andes",
+      "housenumber": "1455",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Andes 1455, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4253918795",
+      "name": "Museo del Tango y el Turf",
+      "ref_lon": -56.1032917,
+      "ref_lat": -34.896208,
+      "street": "Rimac",
+      "housenumber": "1373",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rimac 1373, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4255482663",
+      "name": "Mar del Plata",
+      "ref_lon": -56.1019195,
+      "ref_lat": -34.8961283,
+      "street": "Río de la Plata",
+      "housenumber": "1394",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Río de la Plata 1394, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4338064590",
+      "name": "La Trastienda",
+      "ref_lon": -56.1784225,
+      "ref_lat": -34.8984034,
+      "street": "Avenida Daniel Fernández Crespo",
+      "housenumber": "1763",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Daniel Fernández Crespo 1763, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4401556717",
+      "name": "Martí",
+      "ref_lon": -56.1494632,
+      "ref_lat": -34.9118,
+      "street": "José Martí",
+      "housenumber": "3325",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "José Martí 3325, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4526878590",
+      "name": "Portón de San Pedro",
+      "ref_lon": -56.2004478,
+      "ref_lat": -34.9045055,
+      "street": "Ciudadela",
+      "housenumber": "1427",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "gallery",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Ciudadela 1427, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4530484919",
+      "name": "Oxford Hotel",
+      "ref_lon": -56.1922468,
+      "ref_lat": -34.9072909,
+      "street": "Paraguay",
+      "housenumber": "1286",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Paraguay 1286, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4540541729",
+      "name": "Alma Histórica Boutique Hotel",
+      "ref_lon": -56.2086221,
+      "ref_lat": -34.9070944,
+      "street": "Solís",
+      "housenumber": "1433",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Solís 1433, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4614112964",
+      "name": "Casa Tomás Toribio",
+      "ref_lon": -56.2059219,
+      "ref_lat": -34.9041213,
+      "street": "Piedras",
+      "housenumber": "528",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "artwork",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Piedras 528, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4648925190",
+      "name": "Contraluz Art Hostel",
+      "ref_lon": -56.1726493,
+      "ref_lat": -34.9133678,
+      "street": "Juan D. Jackson",
+      "housenumber": "865",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Juan D. Jackson 865, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4649091893",
+      "name": "Caballo Loco Hostel",
+      "ref_lon": -56.1913087,
+      "ref_lat": -34.9071932,
+      "street": "Héctor Gutiérrez Ruiz",
+      "housenumber": "1287",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Héctor Gutiérrez Ruiz 1287, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4751399487",
+      "name": "Museo Peugeot",
+      "ref_lon": -56.1931137,
+      "ref_lat": -34.9018726,
+      "street": "Paraguay",
+      "housenumber": "1579",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Paraguay 1579, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4773071595",
+      "name": "MVD Urban Housing - Pocitos",
+      "ref_lon": -56.1505246,
+      "ref_lat": -34.920351,
+      "street": "Francisco Antonio Vidal",
+      "housenumber": "649",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Francisco Antonio Vidal 649, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4972954130",
+      "name": "Museo Figari",
+      "ref_lon": -56.2035786,
+      "ref_lat": -34.9056221,
+      "street": "Juan Carlos Gómez",
+      "housenumber": "1427",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Juan Carlos Gómez 1427, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/4988453305",
+      "name": "Museo Casa Villamajó",
+      "ref_lon": -56.1633097,
+      "ref_lat": -34.9149607,
+      "street": "Domingo Cullen",
+      "housenumber": "743",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Domingo Cullen 743, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5064405799",
+      "name": "Vivaldi",
+      "ref_lon": -56.1565527,
+      "ref_lat": -34.9203345,
+      "street": "Blanca del Tabaré",
+      "housenumber": "2903",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Blanca del Tabaré 2903, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5113887833",
+      "name": "Casa de Juan Francisco Giró",
+      "ref_lon": -56.2043917,
+      "ref_lat": -34.9045452,
+      "street": "Cerrito",
+      "housenumber": "586",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Cerrito 586, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5113887834",
+      "name": "Casa de Giuseppe Garibaldi",
+      "ref_lon": -56.2092344,
+      "ref_lat": -34.9071194,
+      "street": "25 de Mayo",
+      "housenumber": "314",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "25 de Mayo 314, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5113887835",
+      "name": "Casa de Juan Antonio Lavalleja",
+      "ref_lon": -56.2078605,
+      "ref_lat": -34.9062151,
+      "street": "Zabala",
+      "housenumber": "1469",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Zabala 1469, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5113887836",
+      "name": "Casa de Manuel Ximénez y Gómez",
+      "ref_lon": -56.205254,
+      "ref_lat": -34.9029565,
+      "street": "25 de Agosto",
+      "housenumber": "580",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "25 de Agosto 580, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5146327721",
+      "name": "Aloft Montevideo Hotel",
+      "ref_lon": -56.1576252,
+      "ref_lat": -34.9246596,
+      "street": "Víctor Soliño",
+      "housenumber": "350",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Víctor Soliño 350, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5156306099",
+      "name": "El Comedy",
+      "ref_lon": -56.1493297,
+      "ref_lat": -34.9080217,
+      "street": "Gabriel Pereira",
+      "housenumber": "3064",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Gabriel Pereira 3064, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5281682300",
+      "name": "Hotel Alcazaba",
+      "ref_lon": -56.1661683,
+      "ref_lat": -34.8963361,
+      "street": "Doctor Mario Cassinoni",
+      "housenumber": "1669",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Doctor Mario Cassinoni 1669, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5286004798",
+      "name": "Days Inn Montevideo",
+      "ref_lon": -56.167652,
+      "ref_lat": -34.8934765,
+      "street": "Acevedo Díaz",
+      "housenumber": "1821",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Acevedo Díaz 1821, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5323865343",
+      "name": "Museo del Automóvil Club del Uruguay",
+      "ref_lon": -56.1890668,
+      "ref_lat": -34.9045929,
+      "street": "Colonia",
+      "housenumber": "1251",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Colonia 1251, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5386373127",
+      "name": "Circus Hostel & Hotel",
+      "ref_lon": -56.204213,
+      "ref_lat": -34.9088068,
+      "street": "Treinta y Tres",
+      "housenumber": "1274",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Treinta y Tres 1274, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5413034021",
+      "name": "Sala Zitarrosa",
+      "ref_lon": -56.19446,
+      "ref_lat": -34.9062548,
+      "street": "Avenida 18 de Julio",
+      "housenumber": "1012",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida 18 de Julio 1012, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5501800101",
+      "name": "Own Montevideo",
+      "ref_lon": -56.1602058,
+      "ref_lat": -34.926309,
+      "street": "José Luis Zorrilla de San Martín",
+      "housenumber": "177",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "José Luis Zorrilla de San Martín 177, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5501808067",
+      "name": "Opta Coliving",
+      "ref_lon": -56.1606033,
+      "ref_lat": -34.9282183,
+      "street": "Manuel José Errazquin",
+      "housenumber": "2370",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Manuel José Errazquin 2370, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5501818388",
+      "name": "BIT Design",
+      "ref_lon": -56.1608789,
+      "ref_lat": -34.9245936,
+      "street": "Ramón Fernández",
+      "housenumber": "265",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Ramón Fernández 265, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5501820903",
+      "name": "Oliva",
+      "ref_lon": -56.161011,
+      "ref_lat": -34.9236875,
+      "street": "Francisco García Cortinas",
+      "housenumber": "2371",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Francisco García Cortinas 2371, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5533721273",
+      "name": "Don Boutique Hotel",
+      "ref_lon": -56.2115703,
+      "ref_lat": -34.9062076,
+      "street": "Piedras",
+      "housenumber": "228,230,234,236",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Piedras 228,230,234,236, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5538914373",
+      "name": "Mediomundo Hostel",
+      "ref_lon": -56.1669717,
+      "ref_lat": -34.9105533,
+      "street": "Juan Paullier",
+      "housenumber": "1004",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Juan Paullier 1004, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5588440272",
+      "name": "Dolce Vita",
+      "ref_lon": -56.1824774,
+      "ref_lat": -34.9072354,
+      "street": "Soriano",
+      "housenumber": "1536",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Soriano 1536, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5635363624",
+      "name": "Museo de la Casa de Gobierno",
+      "ref_lon": -56.1994475,
+      "ref_lat": -34.9071051,
+      "street": "Plaza Independencia",
+      "housenumber": "776",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Plaza Independencia 776, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5709877223",
+      "name": "Hotel Los Ángeles",
+      "ref_lon": -56.1952373,
+      "ref_lat": -34.9063161,
+      "street": "Avenida 18 de Julio",
+      "housenumber": "974",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida 18 de Julio 974, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5721428130",
+      "name": "Orpheo",
+      "ref_lon": -56.1984017,
+      "ref_lat": -34.9045746,
+      "street": "Andes",
+      "housenumber": "1449",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Andes 1449, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5732714701",
+      "name": "Museo Numismático",
+      "ref_lon": -56.1999881,
+      "ref_lat": -34.9033367,
+      "street": "Avenida Int Mpal Juan P. Fabini",
+      "housenumber": "777",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Int Mpal Juan P. Fabini 777, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5735063621",
+      "name": "Al Sur",
+      "ref_lon": -56.2020924,
+      "ref_lat": -34.906198,
+      "street": "Bartolomé Mitre",
+      "housenumber": "1368",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "gallery",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Bartolomé Mitre 1368, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5787711987",
+      "name": "Museo del Cannabis",
+      "ref_lon": -56.1764303,
+      "ref_lat": -34.9099337,
+      "street": "Durazno",
+      "housenumber": "1784",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Durazno 1784, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5808110870",
+      "name": "Galería del Notariado",
+      "ref_lon": -56.178885,
+      "ref_lat": -34.9032016,
+      "street": "Avenida 18 de Julio",
+      "housenumber": "1730",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "marketplace",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida 18 de Julio 1730, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5978898986",
+      "name": "Casa Quinta de Luis Alberto de Herrera",
+      "ref_lon": -56.1762178,
+      "ref_lat": -34.8637368,
+      "street": "Avenida Luis Alberto de Herrera",
+      "housenumber": "3760",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Luis Alberto de Herrera 3760, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5978927072",
+      "name": "Museo de Artes Decorativas \"Palacio Taranco\"",
+      "ref_lon": -56.2081864,
+      "ref_lat": -34.9068164,
+      "street": "25 de Mayo",
+      "housenumber": "376",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "25 de Mayo 376, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5979026089",
+      "name": "Museo Nacional de Historia Natural",
+      "ref_lon": -56.179769,
+      "ref_lat": -34.8944926,
+      "street": "Miguelete",
+      "housenumber": "1825",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Miguelete 1825, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/5979026090",
+      "name": "Espacio de Arte Contemporáneo",
+      "ref_lon": -56.1807682,
+      "ref_lat": -34.894629,
+      "street": "Arenal Grande",
+      "housenumber": "1930",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Arenal Grande 1930, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/6008597464",
+      "name": "Richmond",
+      "ref_lon": -56.1940149,
+      "ref_lat": -34.9071528,
+      "street": "San José",
+      "housenumber": "1034",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "San José 1034, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/6072058695",
+      "name": "Espacio Cultural Bibliobarrio",
+      "ref_lon": -56.1899694,
+      "ref_lat": -34.884026,
+      "street": "Enriqueta Compte y Rique",
+      "housenumber": "1275",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "library",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Enriqueta Compte y Rique 1275, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/6582289587",
+      "name": "Residencia Estudiantil",
+      "ref_lon": -56.1852852,
+      "ref_lat": -34.8751986,
+      "street": "Avenida Burgues",
+      "housenumber": "2764",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Burgues 2764, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/6974190487",
+      "name": "Romantio",
+      "ref_lon": -56.2069302,
+      "ref_lat": -34.9063543,
+      "street": "25 de Mayo",
+      "housenumber": "434",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "25 de Mayo 434, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/8290069617",
+      "name": "Aldeas Infantiles SOS",
+      "ref_lon": -56.3382176,
+      "ref_lat": -34.8021405,
+      "street": "Avenida Luis Batlle Berres",
+      "housenumber": "10204",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Luis Batlle Berres 10204, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9146488699",
+      "name": "Asociación Cultural Cuareim 1080",
+      "ref_lon": -56.1898923,
+      "ref_lat": -34.9114814,
+      "street": "Carlos Gardel",
+      "housenumber": "1194",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Carlos Gardel 1194, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9150038262",
+      "name": "Centro Cultural La Calenda",
+      "ref_lon": -56.1930542,
+      "ref_lat": -34.912193,
+      "street": "Río Negro",
+      "housenumber": "1025",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Río Negro 1025, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9552424117",
+      "name": "Hispanico hotel",
+      "ref_lon": -56.1970334,
+      "ref_lat": -34.906915,
+      "street": "Convención",
+      "housenumber": "1317",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Convención 1317, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9791167755",
+      "name": "Coliving Zag Pocitos",
+      "ref_lon": -56.1505048,
+      "ref_lat": -34.9172085,
+      "street": "Juan Benito Blanco",
+      "housenumber": "783",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Juan Benito Blanco 783, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885526465",
+      "name": "Asociación de Integración Cultural Tangó",
+      "ref_lon": -56.1901514,
+      "ref_lat": -34.9119789,
+      "street": "Curuguaty",
+      "housenumber": "1030",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Curuguaty 1030, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885526466",
+      "name": "Centro Cultural Urbano",
+      "ref_lon": -56.1920694,
+      "ref_lat": -34.9090743,
+      "street": "Paraguay",
+      "housenumber": "1190",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Paraguay 1190, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885526468",
+      "name": "Espacio Cultural Edificio Artigas",
+      "ref_lon": -56.2055865,
+      "ref_lat": -34.9066418,
+      "street": "Rincón",
+      "housenumber": "487",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rincón 487, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885526469",
+      "name": "Centro Cultural de España",
+      "ref_lon": -56.2027206,
+      "ref_lat": -34.9057785,
+      "street": "Rincón",
+      "housenumber": "629",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rincón 629, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885526470",
+      "name": "Centro Cultural de Música",
+      "ref_lon": -56.2037002,
+      "ref_lat": -34.9053447,
+      "street": "Juan Carlos Gómez",
+      "housenumber": "1445",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Juan Carlos Gómez 1445, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885602435",
+      "name": "Afroumbandismo Verde",
+      "ref_lon": -56.1848113,
+      "ref_lat": -34.9074139,
+      "street": "Soriano",
+      "housenumber": "1426",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Soriano 1426, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885633094",
+      "name": "Asociación Cultural y Social Uruguay Negro | ACSUN",
+      "ref_lon": -56.1803867,
+      "ref_lat": -34.9094611,
+      "street": "Lorenzo Carnelli",
+      "housenumber": "1142",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Lorenzo Carnelli 1142, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/9885633095",
+      "name": "Casa de la Cultura Afrouruguaya",
+      "ref_lon": -56.1794584,
+      "ref_lat": -34.9105352,
+      "street": "Isla de Flores",
+      "housenumber": "1645",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "arts_centre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Isla de Flores 1645, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/10183177518",
+      "name": "Teatro Sala Verdi",
+      "ref_lon": -56.1964454,
+      "ref_lat": -34.9082115,
+      "street": "Soriano",
+      "housenumber": "914",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Soriano 914, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11049988433",
+      "name": "Youki Haus",
+      "ref_lon": -56.1662592,
+      "ref_lat": -34.9107251,
+      "street": "San Salvador",
+      "housenumber": "2248",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "San Salvador 2248, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11084221228",
+      "name": "Gema Luxury Suites",
+      "ref_lon": -56.1521737,
+      "ref_lat": -34.920068,
+      "street": "Roque Graseras",
+      "housenumber": "644",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Roque Graseras 644, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11084221229",
+      "name": "Mercure Hotel",
+      "ref_lon": -56.1555262,
+      "ref_lat": -34.9251312,
+      "street": "Rambla Mahatma Gandhi",
+      "housenumber": "371",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Rambla Mahatma Gandhi 371, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11093698610",
+      "name": "Teatro Circular",
+      "ref_lon": -56.1913307,
+      "ref_lat": -34.9052629,
+      "street": "Avenida General Rondeau",
+      "housenumber": "1388",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida General Rondeau 1388, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11099732475",
+      "name": "Museo Pedagógico José Pedro Varela",
+      "ref_lon": -56.1908329,
+      "ref_lat": -34.9052619,
+      "street": "Doctora Adela Reta",
+      "housenumber": "1175",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Doctora Adela Reta 1175, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11114546259",
+      "name": "Merit Montevideo Apart & Suites",
+      "ref_lon": -56.1529557,
+      "ref_lat": -34.9139858,
+      "street": "Bulevar España",
+      "housenumber": "2769",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Bulevar España 2769, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11114683168",
+      "name": "Avokanto",
+      "ref_lon": -56.1697745,
+      "ref_lat": -34.9107767,
+      "street": "San Salvador",
+      "housenumber": "2077",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "San Salvador 2077, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11115100561",
+      "name": "Biblioteca Nacional",
+      "ref_lon": -56.1774677,
+      "ref_lat": -34.9027376,
+      "street": "Avenida 18 de Julio",
+      "housenumber": "1790",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "library",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida 18 de Julio 1790, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11115412008",
+      "name": "Ciudadano Suites",
+      "ref_lon": -56.1666182,
+      "ref_lat": -34.8928112,
+      "street": "Goes",
+      "housenumber": "2297",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Goes 2297, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11115417077",
+      "name": "Tres Cruces",
+      "ref_lon": -56.1674818,
+      "ref_lat": -34.8919785,
+      "street": "Miguelete",
+      "housenumber": "2356",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Miguelete 2356, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11115458101",
+      "name": "Mercosur Universitas",
+      "ref_lon": -56.1634951,
+      "ref_lat": -34.8929374,
+      "street": "Avenida 8 de Octubre",
+      "housenumber": "2481",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida 8 de Octubre 2481, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11159052131",
+      "name": "Museo del Azulejo",
+      "ref_lon": -56.1891792,
+      "ref_lat": -34.9040606,
+      "street": "Yi",
+      "housenumber": "1444",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Yi 1444, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11182097439",
+      "name": "SORO Montevideo, Curio Collection",
+      "ref_lon": -56.1501474,
+      "ref_lat": -34.9173817,
+      "street": "Federico N. Abadie",
+      "housenumber": "2912",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Federico N. Abadie 2912, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11261228861",
+      "name": "Biblioteca Comunitaria Paco Espínola",
+      "ref_lon": -56.2718439,
+      "ref_lat": -34.8366483,
+      "street": "Avenida Luis Batlle Berres",
+      "housenumber": "6585 BIS",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "library",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Luis Batlle Berres 6585 BIS, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11290941509",
+      "name": "Museo del Observatorio Meteorológico y Astronómico",
+      "ref_lon": -56.2494293,
+      "ref_lat": -34.7965275,
+      "street": "Avenida Lezica",
+      "housenumber": "6375",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Avenida Lezica 6375, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11290950540",
+      "name": "Museo de las Telecomunicaciones",
+      "ref_lon": -56.1941027,
+      "ref_lat": -34.8920853,
+      "street": "Paraguay",
+      "housenumber": "2055",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Paraguay 2055, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11290950541",
+      "name": "Museo de la Dirección Nacional de Bomberos",
+      "ref_lon": -56.1807665,
+      "ref_lat": -34.9025571,
+      "street": "Colonia",
+      "housenumber": "1665",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Colonia 1665, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11290950542",
+      "name": "Museo de Historia Natural Dr. Carlos Torres de la LLosa",
+      "ref_lon": -56.175729,
+      "ref_lat": -34.9034109,
+      "street": "Eduardo Acevedo",
+      "housenumber": "1427",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Eduardo Acevedo 1427, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11291515009",
+      "name": "Teatro Victoria",
+      "ref_lon": -56.1939918,
+      "ref_lat": -34.9035984,
+      "street": "Río Negro",
+      "housenumber": "1479",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Río Negro 1479, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11300918966",
+      "name": "Smart Hotel Montevideo",
+      "ref_lon": -56.1977653,
+      "ref_lat": -34.9084649,
+      "street": "Andes",
+      "housenumber": "1240",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hotel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Andes 1240, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11589810821",
+      "name": "Casa Copada",
+      "ref_lon": -56.1877419,
+      "ref_lat": -34.9090005,
+      "street": "Doctor Aquiles R. Lanza",
+      "housenumber": "1183",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Doctor Aquiles R. Lanza 1183, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/11882043702",
+      "name": "Salla Jorge Lazaroff",
+      "ref_lon": -56.1324931,
+      "ref_lat": -34.8557662,
+      "street": "8 de Octobre",
+      "housenumber": "4849",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "8 de Octobre 4849, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/12033873825",
+      "name": "Viajero Montevideo Hostel",
+      "ref_lon": -56.2021917,
+      "ref_lat": -34.90642,
+      "street": "Bartolomé Mitre",
+      "housenumber": "1361",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Bartolomé Mitre 1361, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/13036389301",
+      "name": "Unidad Agroalimentaria Metropolitana (UAM)",
+      "ref_lon": -56.2644468,
+      "ref_lat": -34.8177866,
+      "street": "Camino Luis Eduardo Pérez",
+      "housenumber": "6651",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "marketplace",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Camino Luis Eduardo Pérez 6651, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/13073281966",
+      "name": "Alohate",
+      "ref_lon": -56.1857318,
+      "ref_lat": -34.8980325,
+      "street": "Miguelete",
+      "housenumber": "1470",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "hostel",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Miguelete 1470, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/13227935261",
+      "name": "espacio teatro",
+      "ref_lon": -56.1979518,
+      "ref_lat": -34.9043575,
+      "street": "Mercedes",
+      "housenumber": "865",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "theatre",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Mercedes 865, Montevideo, Uruguay"
+        }
+      ]
+    },
+    {
+      "id": "node/13767551401",
+      "name": "MUDE - Museo Uruguayo del Escultismo",
+      "ref_lon": -56.0623623,
+      "ref_lat": -34.8660744,
+      "street": "Camino Carrasco",
+      "housenumber": "7254",
+      "city": "Montevideo",
+      "country": "UY",
+      "type": "museum",
+      "queries": [
+        {
+          "id": "full",
+          "label": "Dirección completa",
+          "text": "Camino Carrasco 7254, Montevideo, Uruguay"
+        }
+      ]
+    }
+  ]
+}
