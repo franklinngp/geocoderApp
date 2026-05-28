@@ -1,5 +1,10 @@
 import { Injectable, signal } from '@angular/core';
-import type { GeocodeHit, GeocoderId, GeocoderOption } from './geocoder.types';
+import type {
+  GeocodeHit,
+  GeocoderCompareResult,
+  GeocoderId,
+  GeocoderOption,
+} from './geocoder.types';
 
 export const GEOCODER_OPTIONS: GeocoderOption[] = [
   { id: 'nominatim', label: 'Nominatim (OSM)' },
@@ -47,19 +52,50 @@ export class GeocoderService {
   async geocode(query: string): Promise<GeocodeHit | null> {
     const trimmed = query.trim();
     if (!trimmed) return null;
+    return this.geocodeWithId(trimmed, this.selectedId());
+  }
+
+  async geocodeAll(query: string): Promise<GeocoderCompareResult[]> {
+    const trimmed = query.trim();
+    if (!trimmed) return [];
 
     this.searching.set(true);
     try {
-      switch (this.selectedId()) {
-        case 'nominatim':
-          return await this.geocodeNominatim(trimmed);
-        case 'photon':
-          return await this.geocodePhoton(trimmed);
-        case 'arcgis':
-          return await this.geocodeArcgis(trimmed);
-      }
+      return await Promise.all(
+        this.options.map(async ({ id }) => {
+          try {
+            const hit = await this.geocodeWithId(trimmed, id);
+            return {
+              geocoderId: id,
+              hit,
+              error: hit ? null : 'Sin resultados',
+            };
+          } catch (err) {
+            return {
+              geocoderId: id,
+              hit: null,
+              error:
+                err instanceof Error ? err.message : 'Error al geocodificar',
+            };
+          }
+        }),
+      );
     } finally {
       this.searching.set(false);
+    }
+  }
+
+  private async geocodeWithId(
+    query: string,
+    id: GeocoderId,
+  ): Promise<GeocodeHit | null> {
+    switch (id) {
+      case 'nominatim':
+        return this.geocodeNominatim(query);
+      case 'photon':
+        return this.geocodePhoton(query);
+      case 'arcgis':
+        return this.geocodeArcgis(query);
     }
   }
 

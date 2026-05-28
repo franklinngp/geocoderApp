@@ -12,3 +12,11 @@ export interface GeocodeHit {
   /** west, south, east, north (EPSG:4326) para ajustar vista */
   extent?: [number, number, number, number];
 }
+
+export interface GeocoderCompareResult {
+  geocoderId: GeocoderId;
+  hit: GeocodeHit | null;
+  error: string | null;
+  /** Error en metros: resultado del geocoder vs coordenadas CSV de referencia */
+  distanceM?: number | null;
+}

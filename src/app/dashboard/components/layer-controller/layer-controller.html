@@ -113,18 +113,41 @@
       </label>
     </div>
     <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">
-      <p class="font-bold">Búsqueda</p>
-      <p class="text-xs text-base-content/70">
-        Geocoder: {{ geocoderLabel(lastSearchGeocoder()) }}
-      </p>
+      <p class="font-bold">Búsqueda comparativa</p>
       @if (searchError(); as err) {
         <p class="text-error text-sm">{{ err }}</p>
-      } @else if (lastSearchHit(); as hit) {
-        <p class="text-sm">{{ hit.displayName }}</p>
-        <p class="text-sm">Lat: {{ hit.lat.toFixed(5) }}</p>
-        <p class="text-sm">Lon: {{ hit.lon.toFixed(5) }}</p>
-      } @else {
-        <p class="text-base-content/60 text-sm">Sin búsqueda reciente</p>
+      }
+      @if (searchReferenceCsv(); as ref) {
+        <p class="text-xs text-base-content/60">
+          Referencia CSV: {{ ref.lat.toFixed(5) }}, {{ ref.lon.toFixed(5) }}
+        </p>
+      } @else if (searchResultsWithDistance().length > 0) {
+        <p class="text-xs text-base-content/60">
+          Elija una dirección de la lista para comparar con el CSV
+        </p>
+      }
+      @for (result of searchResultsWithDistance(); track result.geocoderId) {
+        <div class="border-t border-white/10 pt-2 first:border-t-0 first:pt-0">
+          <p class="text-xs font-semibold text-base-content/80">
+            {{ geocoderLabel(result.geocoderId) }}
+          </p>
+          @if (result.error) {
+            <p class="text-error text-sm">{{ result.error }}</p>
+          } @else if (result.hit; as hit) {
+            <p class="text-sm">{{ hit.displayName }}</p>
+            <p class="text-sm">Lat: {{ hit.lat.toFixed(5) }}</p>
+            <p class="text-sm">Lon: {{ hit.lon.toFixed(5) }}</p>
+            @if (result.distanceM != null) {
+              <p class="text-sm text-primary font-semibold">
+                Error de : {{ formatDistance(result.distanceM) }}
+              </p>
+            }
+          }
+        </div>
+      } @empty {
+        @if (!searchError()) {
+          <p class="text-base-content/60 text-sm">Sin búsqueda reciente</p>
+        }
       }
     </div>
     <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">

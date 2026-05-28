@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { getDistance } from 'ol/sphere';
 import { GeocoderService } from '../../../geocoding/geocoder.service';
+import type { GeocoderCompareResult } from '../../../geocoding/geocoder.types';
 import { MapService } from '../../map-service';
 
 @Component({
@@ -11,14 +13,37 @@ import { MapService } from '../../map-service';
 export class LayerController {
   mapService = inject(MapService);
   geocoderService = inject(GeocoderService);
-  lastSearchHit = this.mapService.lastSearchHit;
-  lastSearchGeocoder = this.mapService.lastSearchGeocoder;
   searchError = this.mapService.searchError;
   coordenadasCursor = this.mapService.coordenadasCursor;
+
+  searchReferenceCsv = this.mapService.searchReferenceCsv;
+
+  /** Error en metros: resultado del geocoder vs coordenadas CSV */
+  searchResultsWithDistance = computed((): GeocoderCompareResult[] => {
+    const ref = this.mapService.searchReferenceCsv();
+    const results = this.mapService.searchCompareResults();
+    if (!ref) return results;
+
+    return results.map((r) => {
+      if (!r.hit) return r;
+      return {
+        ...r,
+        distanceM: getDistance(
+          [ref.lon, ref.lat],
+          [r.hit.lon, r.hit.lat],
+        ),
+      };
+    });
+  });
 
   geocoderLabel(id: string | null): string {
     if (!id) return '—';
     return this.geocoderService.options.find((o) => o.id === id)?.label ?? id;
+  }
+
+  formatDistance(meters: number): string {
+    if (meters < 1000) return `${Math.round(meters)} m`;
+    return `${(meters / 1000).toFixed(2)} km`;
   }
 
   verificar_visibilidad() {
