@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { getDistance } from 'ol/sphere';
 import { GeocoderService } from '../../../geocoding/geocoder.service';
-import type { GeocoderCompareResult } from '../../../geocoding/geocoder.types';
+import { geocoderColor } from '../../../geocoding/geocoder-colors';
+import type { GeocoderCompareResult, GeocoderId } from '../../../geocoding/geocoder.types';
 import { MapService } from '../../map-service';
 
 @Component({
@@ -9,6 +10,7 @@ import { MapService } from '../../map-service';
   imports: [],
   templateUrl: './layer-controller.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { class: 'block w-full' },
 })
 export class LayerController {
   mapService = inject(MapService);
@@ -18,7 +20,8 @@ export class LayerController {
 
   searchReferenceCsv = this.mapService.searchReferenceCsv;
   drawMode = this.mapService.drawMode;
-  measurement = this.mapService.measurement;
+  drawMeasurements = this.mapService.drawMeasurements;
+  selectedGeocoderResultId = this.mapService.selectedGeocoderResultId;
 
   /** Error en metros: resultado del geocoder vs coordenadas CSV */
   searchResultsWithDistance = computed((): GeocoderCompareResult[] => {
@@ -43,6 +46,10 @@ export class LayerController {
     return this.geocoderService.options.find((o) => o.id === id)?.label ?? id;
   }
 
+  geocoderColor(id: GeocoderId): string {
+    return geocoderColor(id);
+  }
+
   formatDistance(meters: number): string {
     if (meters < 1000) return `${Math.round(meters)} m`;
     return `${(meters / 1000).toFixed(2)} km`;
@@ -65,6 +72,15 @@ export class LayerController {
     this.mapService.clearDrawings();
   }
 
+  exitDrawMode(): void {
+    this.mapService.exitDrawMode();
+  }
+
+  onResultClick(result: GeocoderCompareResult): void {
+    if (!result.hit) return;
+    this.mapService.fitToGeocoderResult(result);
+  }
+
   verificar_visibilidad() {
     return this.mapService.mapRef()?.getLayers().getArray().find((layer) => layer.get('name') === 'layer_ide')?.getVisible();
   }
@@ -78,6 +94,12 @@ export class LayerController {
     if (layerIde) {
       console.log('layerIde', layerIde.getVisible());
       layerIde.setVisible(!layerIde.getVisible());
+    }
+  }
+  onChangeLayerPuntosTuristicos() {
+    const layer = this.mapService.mapRef()?.getLayers().getArray().find((layer) => layer.get('name') === 'layer_puntos_turisticos');
+    if (layer) {
+      layer.setVisible(!layer.getVisible());
     }
   }
   onChangeLayerAeropuertos() {
