@@ -17,6 +17,8 @@ export class LayerController {
   coordenadasCursor = this.mapService.coordenadasCursor;
 
   searchReferenceCsv = this.mapService.searchReferenceCsv;
+  drawMode = this.mapService.drawMode;
+  measurement = this.mapService.measurement;
 
   /** Error en metros: resultado del geocoder vs coordenadas CSV */
   searchResultsWithDistance = computed((): GeocoderCompareResult[] => {
@@ -44,6 +46,23 @@ export class LayerController {
   formatDistance(meters: number): string {
     if (meters < 1000) return `${Math.round(meters)} m`;
     return `${(meters / 1000).toFixed(2)} km`;
+  }
+
+  formatArea(m2: number): string {
+    if (m2 < 10000) return `${Math.round(m2)} m²`;
+    return `${(m2 / 10000).toFixed(2)} ha`;
+  }
+
+  toggleDrawLine(): void {
+    this.mapService.setDrawMode('LineString');
+  }
+
+  toggleDrawPolygon(): void {
+    this.mapService.setDrawMode('Polygon');
+  }
+
+  clearDrawing(): void {
+    this.mapService.clearDrawings();
   }
 
   verificar_visibilidad() {

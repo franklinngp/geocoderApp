@@ -151,6 +151,50 @@
       }
     </div>
     <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">
+      <p class="font-bold">Medición</p>
+      <div class="join bg-base-300 p-1 rounded-lg border border-white/5">
+        <button
+          type="button"
+          class="join-item btn btn-xs px-4 border-none hover:bg-base-100 transition-all"
+          [class.!bg-primary]="drawMode() === 'LineString'"
+          [class.!text-primary-content]="drawMode() === 'LineString'"
+          (click)="toggleDrawLine()"
+        >
+          Línea
+        </button>
+        <button
+          type="button"
+          class="join-item btn btn-xs px-4 border-none hover:bg-base-100 transition-all"
+          [class.!bg-primary]="drawMode() === 'Polygon'"
+          [class.!text-primary-content]="drawMode() === 'Polygon'"
+          (click)="toggleDrawPolygon()"
+        >
+          Polígono
+        </button>
+      </div>
+      @if (measurement(); as m) {
+        @if (m.type === 'line') {
+          <p class="text-sm text-primary font-semibold">
+            Longitud: {{ formatDistance(m.lengthM) }}
+          </p>
+        } @else {
+          <p class="text-sm text-primary font-semibold">
+            Perímetro: {{ formatDistance(m.lengthM) }}
+          </p>
+          @if (m.areaM2 != null) {
+            <p class="text-sm text-primary font-semibold">
+              Área: {{ formatArea(m.areaM2) }}
+            </p>
+          }
+        }
+        <button type="button" class="btn btn-xs btn-ghost self-start" (click)="clearDrawing()">
+          Borrar
+        </button>
+      } @else if (drawMode() !== 'none') {
+        <p class="text-xs text-base-content/60">Haga clic en el mapa para dibujar</p>
+      }
+    </div>
+    <div class="flex flex-col gap-2 mt-2 bg-base-100 p-2 rounded-lg border border-white/5">
       <p class="font-bold">Coordenadas del cursor</p>
       @if (coordenadasCursor(); as c) {
         <p>Lat: {{ c.lat.toFixed(5) }}</p>

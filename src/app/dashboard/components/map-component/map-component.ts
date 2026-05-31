@@ -212,6 +212,20 @@ this.map.addLayer(capaDepartamentos);
     searchLayer.set('name', 'layer_search');
     this.map.addLayer(searchLayer);
 
+    const drawSource = new VectorSource();
+    this.mapService.registerDrawSource(drawSource);
+
+    const drawLayer = new VectorLayer({
+      source: drawSource,
+      style: new Style({
+        fill: new Fill({ color: 'rgba(59, 130, 246, 0.25)' }),
+        stroke: new Stroke({ color: '#3b82f6', width: 2 }),
+      }),
+      zIndex: 25,
+    });
+    drawLayer.set('name', 'layer_draw');
+    this.map.addLayer(drawLayer);
+
     this.map.updateSize();
 
     // overlay popup
