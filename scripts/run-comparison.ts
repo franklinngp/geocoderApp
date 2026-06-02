@@ -5,6 +5,7 @@ import { errorVector, mean, median, percentile } from './metrics';
 import { NominatimProvider } from './providers/nominatim';
 import { PhotonProvider } from './providers/photon';
 import { ArcGisProvider } from './providers/arcgis';
+import { SugdeProvider } from './providers/sugde';
 import type {
   CasosFile,
   ComparisonRow,
@@ -20,6 +21,7 @@ const DELAY_MS: Record<string, number> = {
   nominatim: 1100,
   photon: 350,
   arcgis: 500,
+  sugde: 500,
 };
 
 function sleep(ms: number): Promise<void> {
@@ -50,6 +52,8 @@ function getProvider(name: string): GeocoderProvider {
       return new PhotonProvider();
     case 'arcgis':
       return new ArcGisProvider();
+    case 'sugde':                         
+      return new SugdeProvider();
     default:
       throw new Error(`Geocoder desconocido: ${name}. Disponibles: nominatim, photon, arcgis`);
   }
@@ -221,7 +225,8 @@ async function main(): Promise<void> {
   const allRows: ComparisonRow[] = [];
   for (let i = 0; i < cases.length; i++) {
     const c = cases[i]!;
-    process.stdout.write(`[${i + 1}/${cases.length}] ${c.name}\r`);
+    process.stdout.write('\r\x1b[K');
+    process.stdout.write(`[${i + 1}/${cases.length}] ${c.name}`);
     const rows = await processCase(provider, c, delayMs);
     allRows.push(...rows);
   }
