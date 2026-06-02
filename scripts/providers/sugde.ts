@@ -2,40 +2,35 @@ import type { GeocodeResult, GeocoderProvider } from '../types';
 import https from 'https';
 
 const SUGDE_HOST = 'direcciones.ide.uy';
-const SUGDE_PATH = '/api/v0/geocode/BusquedaDireccion';
+const SUGDE_PATH = '/api/v1/geocode/direcUnica';
 
-interface SugdeDireccion {
-  codigoPostal?: number;
-  codigoPostalAmpliado?: number;
-  direccion?: {
-    calle?: {
-      idCalle?: number;
-      nombre_normalizado?: string;
-    };
-    departamento?: {
-      idDepartamento?: number;
-      nombre_normalizado?: string;
-    };
-    inmueble?: {
-      idPuntoNotable?: number;
-      nombre?: string;
-    };
-    localidad?: {
-      idLocalidad?: number;
-      nombre_normalizado?: string;
-    };
-    manzana?: number;
-    numero?: {
-      nro_puerta?: number;
-    };
-    solar?: number;
-  };
-  error?: string;
-  idPunto?: number;
-  idTipoClasificacion?: number;
-  puntoX?: number;
-  puntoY?: number;
-  srid?: number;
+interface SugdeDirecUnicaResult {
+  address?: string;
+  departamento?: string;
+  geom?: string;
+  id?: string;
+  idCalle?: number;
+  idCalleEsq?: number;
+  idDepartamento?: number;
+  idLocalidad?: number;
+  inmueble?: string;
+  km?: number;
+  lat?: number;
+  letra?: string;
+  lng?: number;
+  localidad?: string;
+  manzana?: number;
+  nomVia?: string;
+  portalNumber?: number;
+  postalCode?: string;
+  priority?: number;
+  ranking?: number;
+  solar?: number;
+  source?: string;
+  state?: number;
+  stateMsg?: string;
+  tip_via?: string;
+  type?: string;
 }
 
 export class SugdeProvider implements GeocoderProvider {
@@ -43,8 +38,11 @@ export class SugdeProvider implements GeocoderProvider {
 
   geocode(query: string): Promise<GeocodeResult | null> {
     return new Promise((resolve, reject) => {
-      const params = new URLSearchParams({ calle: query });
-      
+      const params = new URLSearchParams({ 
+        q: query,
+        limit: '1'
+      });
+
       const options: https.RequestOptions = {
         hostname: SUGDE_HOST,
         path: `${SUGDE_PATH}?${params.toString()}`,
@@ -67,7 +65,7 @@ export class SugdeProvider implements GeocoderProvider {
         
         res.on('end', () => {
           try {
-            const candidates = JSON.parse(data) as SugdeDireccion[];
+            const candidates = JSON.parse(data) as SugdeDirecUnicaResult[];
 
             if (!candidates || candidates.length === 0) {
               resolve(null);
@@ -76,33 +74,16 @@ export class SugdeProvider implements GeocoderProvider {
 
             const bestMatch = candidates[0]!;
 
-            if (bestMatch.puntoX === undefined || bestMatch.puntoY === undefined || bestMatch.puntoX === 0) {
+            if (bestMatch.lng === undefined || bestMatch.lat === undefined || bestMatch.lng === 0) {
               resolve(null);
               return;
             }
 
-            const calleNom = bestMatch.direccion?.calle?.nombre_normalizado ?? '';
-            const nroPuerta = bestMatch.direccion?.numero?.nro_puerta ?? '';
-            const locNom = bestMatch.direccion?.localidad?.nombre_normalizado ?? '';
-            
-            const displayName = `${calleNom} ${nroPuerta}, ${locNom}, Uruguay`.replace(/\s+/g, ' ').trim();
-
-            let confidence = 100;
-            const errorText = bestMatch.error?.trim() ?? '';
-
-            if (errorText.includes('APROXIMADO POR CALLE')) {
-              confidence = 70;
-            } else if (errorText.includes('APROXIMADO POR LOCALIDAD')) {
-              confidence = 40;
-            } else if (errorText.includes('IMPOSIBLE POSICIONAR')) {
-              confidence = 10;
-            }
-
             resolve({
-              lon: bestMatch.puntoX,
-              lat: bestMatch.puntoY,
-              displayName: displayName !== ', , Uruguay' ? displayName : query,
-              confidence: confidence,
+              lon: bestMatch.lng,
+              lat: bestMatch.lat,
+              displayName: bestMatch.address ?? query,
+              confidence: bestMatch.ranking !== undefined ? bestMatch.ranking : 100,
               raw: bestMatch,
             });
           } catch (e) {
