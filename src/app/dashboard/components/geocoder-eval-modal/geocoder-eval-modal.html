@@ -1,0 +1,257 @@
+@if (open()) {
+  <dialog class="modal modal-open">
+    <div class="modal-box flex max-h-[90dvh] max-w-5xl flex-col">
+      <h3 class="text-lg font-bold">Evaluar Geocoders</h3>
+      <p class="mt-1 text-sm text-base-content/70">
+        Compara los geocoders para uno o los {{ direcciones.length }} puntos de referencia.
+        Métricas: distancia euclidiana, Haversine y su promedio.
+      </p>
+
+      <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-end">
+        <label class="form-control min-w-0 flex-1">
+          <span class="label py-0 pb-1">
+            <span class="label-text font-medium">Punto de referencia</span>
+          </span>
+          <select
+            class="select select-bordered w-full"
+            [value]="selectedId()"
+            (change)="onPointChange($event)"
+            [disabled]="evaluating()"
+          >
+            @for (d of direcciones; track d.id) {
+              <option [value]="d.id">{{ d.id }}. {{ d.name }}</option>
+            }
+          </select>
+        </label>
+
+        <button
+          type="button"
+          class="btn btn-primary shrink-0"
+          (click)="evaluate()"
+          [disabled]="evaluating()"
+        >
+          @if (evaluating() && evalMode() === 'single') {
+            <span class="loading loading-spinner loading-sm"></span>
+          }
+          Evaluar punto
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-accent shrink-0"
+          (click)="evaluateAll()"
+          [disabled]="evaluating()"
+        >
+          @if (evaluating() && evalMode() === 'batch') {
+            <span class="loading loading-spinner loading-sm"></span>
+          }
+          Evaluar todos ({{ direcciones.length }})
+        </button>
+      </div>
+
+      @if (evalError(); as err) {
+        <p class="mt-3 rounded-md bg-error/10 px-3 py-2 text-sm text-error">{{ err }}</p>
+      }
+
+      @if (evaluating()) {
+        <div
+          class="mt-4 flex flex-col items-center gap-3 rounded-lg border border-white/10 bg-base-300/40 px-4 py-8"
+          role="status"
+          aria-live="polite"
+        >
+          <span class="loading loading-spinner loading-lg text-primary"></span>
+          @if (loadingProgress(); as progress) {
+            @if (progress.batchIndex != null) {
+              <p class="text-sm font-semibold text-base-content/90">
+                Punto {{ progress.batchIndex }}/{{ progress.batchTotal }}
+              </p>
+              <p class="max-w-md truncate text-xs text-base-content/60">
+                {{ progress.batchName }}
+              </p>
+            }
+            @if (progress.waiting) {
+              <p class="text-sm font-medium text-base-content/90">
+                Esperando antes de consultar {{ geocoderLabel(progress.geocoderId) }}…
+              </p>
+            } @else {
+              <p class="text-sm font-medium text-base-content/90">
+                Consultando {{ geocoderLabel(progress.geocoderId) }}
+                ({{ progress.step }}/{{ progress.total }})…
+              </p>
+            }
+            @if (evalMode() === 'batch') {
+              <p class="text-xs text-base-content/55">
+                Evaluación completa: puede tardar varios minutos. Se descargará un XLSX al finalizar.
+              </p>
+            } @else {
+              <p class="text-xs text-base-content/55">
+                Pausa de 2–3 s entre geocoders para evitar bloqueos
+              </p>
+            }
+          } @else {
+            <p class="text-sm text-base-content/70">Preparando evaluación…</p>
+          }
+        </div>
+      }
+
+      <div class="mt-4 min-h-0 flex-1 overflow-y-auto">
+        @if (evalMode() === 'single' && evaluatedPoint(); as point) {
+          <p class="rounded-md bg-base-300/50 px-3 py-2 text-xs text-base-content/70">
+            <span class="font-medium text-base-content/90">Referencia:</span>
+            {{ point.name }} ·
+            <span class="font-mono tabular-nums">{{ point.lat.toFixed(5) }}, {{ point.lon.toFixed(5) }}</span>
+          </p>
+        }
+
+        @if (rows().length > 0 || summaryRows().length > 0) {
+          <div class="mt-3 flex justify-end">
+            <button
+              type="button"
+              class="btn btn-outline btn-sm"
+              (click)="downloadXlsx()"
+              [disabled]="evaluating() || exportRows().length === 0"
+            >
+              Descargar XLSX
+            </button>
+          </div>
+        }
+
+        @if (evalMode() === 'single' && rows().length > 0) {
+          <div class="mt-3 overflow-x-auto rounded-lg border border-white/10">
+            <table class="table table-zebra table-sm">
+              <thead>
+                <tr class="text-xs uppercase tracking-wide text-base-content/60">
+                  <th>Geocoder</th>
+                  <th>Resultado</th>
+                  <th class="text-right">Euclidiana</th>
+                  <th class="text-right">Haversine</th>
+                  <th class="text-right">Promedio</th>
+                  <th class="text-right">Tiempo</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (row of rows(); track row.geocoderId) {
+                  <tr>
+                    <td>
+                      <span class="inline-flex items-center gap-2 font-medium">
+                        <span
+                          class="inline-block h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-white/20"
+                          [style.background-color]="geocoderColor(row.geocoderId)"
+                        ></span>
+                        {{ row.label }}
+                      </span>
+                    </td>
+                    @if (row.huboResultado) {
+                      <td class="max-w-[12rem] truncate text-xs" [title]="row.resultado">{{ row.resultado }}</td>
+                      <td class="text-right font-mono tabular-nums">{{ formatDistance(row.euclideanM) }}</td>
+                      <td class="text-right font-mono tabular-nums">{{ formatDistance(row.haversineM) }}</td>
+                      <td class="text-right font-mono tabular-nums">{{ formatDistance(row.averageM) }}</td>
+                      <td class="text-right font-mono tabular-nums">{{ formatMs(row.elapsedMs) }}</td>
+                    } @else {
+                      <td colspan="5" class="text-sm text-error">{{ row.message }}</td>
+                    }
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        }
+
+        @if (evalMode() === 'batch' && summaryRows().length > 0) {
+          <section class="mb-4 mt-3">
+            <h4 class="mb-2 text-sm font-semibold text-base-content">
+              Resumen agregado ({{ batchResults().length }} puntos)
+            </h4>
+            <div class="overflow-x-auto rounded-lg border border-white/10">
+              <table class="table table-zebra table-sm">
+                <thead>
+                  <tr class="text-xs uppercase tracking-wide text-base-content/60">
+                    <th>Geocoder</th>
+                    <th class="text-right">OK / Fallos</th>
+                    <th class="text-right">Euclidiana media</th>
+                    <th class="text-right">Haversine media</th>
+                    <th class="text-right">Promedio medio</th>
+                    <th class="text-right">Tiempo medio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (row of summaryRows(); track row.geocoderId) {
+                    <tr>
+                      <td>
+                        <span class="inline-flex items-center gap-2 font-medium">
+                          <span
+                            class="inline-block h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-white/20"
+                            [style.background-color]="geocoderColor(row.geocoderId)"
+                          ></span>
+                          {{ row.label }}
+                        </span>
+                      </td>
+                      <td class="text-right font-mono tabular-nums text-xs">
+                        {{ row.ok }} / {{ row.failed }}
+                      </td>
+                      <td class="text-right font-mono tabular-nums">{{ formatDistance(row.meanEuclideanM) }}</td>
+                      <td class="text-right font-mono tabular-nums">{{ formatDistance(row.meanHaversineM) }}</td>
+                      <td class="text-right font-mono tabular-nums">{{ formatDistance(row.meanAverageM) }}</td>
+                      <td class="text-right font-mono tabular-nums">{{ formatMs(row.meanElapsedMs) }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <h4 class="mb-2 text-sm font-semibold text-base-content">Detalle por punto</h4>
+            <div class="max-h-80 overflow-x-auto overflow-y-auto rounded-lg border border-white/10">
+              <table class="table table-zebra table-xs sm:table-sm">
+                <thead class="sticky top-0 z-10 bg-base-200">
+                  <tr class="text-xs uppercase tracking-wide text-base-content/60">
+                    <th>#</th>
+                    <th>Punto</th>
+                    <th>Geocoder</th>
+                    <th class="text-right">Euclidiana</th>
+                    <th class="text-right">Haversine</th>
+                    <th class="text-right">Promedio</th>
+                    <th class="text-right">Tiempo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (row of detailRows(); track row.point.id + row.geocoderId) {
+                    <tr>
+                      <td class="font-mono tabular-nums text-base-content/60">{{ row.point.id }}</td>
+                      <td class="max-w-[10rem] truncate" [title]="row.point.name">{{ row.point.name }}</td>
+                      <td>
+                        <span class="inline-flex items-center gap-1.5">
+                          <span
+                            class="inline-block h-2 w-2 shrink-0 rounded-full"
+                            [style.background-color]="geocoderColor(row.geocoderId)"
+                          ></span>
+                          <span class="hidden sm:inline">{{ row.label }}</span>
+                        </span>
+                      </td>
+                      @if (row.huboResultado) {
+                        <td class="text-right font-mono tabular-nums">{{ formatDistance(row.euclideanM) }}</td>
+                        <td class="text-right font-mono tabular-nums">{{ formatDistance(row.haversineM) }}</td>
+                        <td class="text-right font-mono tabular-nums">{{ formatDistance(row.averageM) }}</td>
+                        <td class="text-right font-mono tabular-nums">{{ formatMs(row.elapsedMs) }}</td>
+                      } @else {
+                        <td colspan="4" class="text-xs text-error">{{ row.message }}</td>
+                      }
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          </section>
+        }
+      </div>
+
+      <div class="modal-action mt-4 shrink-0">
+        <button type="button" class="btn" (click)="close()" [disabled]="evaluating()">Cerrar</button>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button type="button" (click)="close()" [disabled]="evaluating()">cerrar</button>
+    </form>
+  </dialog>
+}

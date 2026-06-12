@@ -4,15 +4,17 @@ import {
   effect,
   ElementRef,
   inject,
+  signal,
   viewChild,
 } from '@angular/core';
 import { GeocoderService } from '../../../geocoding/geocoder.service';
+import { GeocoderEvalModalComponent } from '../geocoder-eval-modal/geocoder-eval-modal';
 import { mapConfig } from '../map-component/mapConfig';
 import { MapService } from '../../map-service';
 
 @Component({
   selector: 'app-header-component',
-  imports: [],
+  imports: [GeocoderEvalModalComponent],
   templateUrl: './header-component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -20,6 +22,7 @@ export class HeaderComponent {
   inputRef = viewChild<ElementRef<HTMLInputElement>>('searchInput');
   mapService = inject(MapService);
   geocoderService = inject(GeocoderService);
+  evalModalOpen = signal(false);
 
   constructor() {
     effect(() => {
@@ -34,6 +37,14 @@ export class HeaderComponent {
     const direccion = this.inputRef()?.nativeElement.value?.trim();
     if (!direccion) return;
     await this.mapService.searchAddress(direccion);
+  }
+
+  abrirEvaluacion(): void {
+    this.evalModalOpen.set(true);
+  }
+
+  cerrarEvaluacion(): void {
+    this.evalModalOpen.set(false);
   }
 
   limpiarMapa(): void {

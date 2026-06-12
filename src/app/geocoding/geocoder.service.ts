@@ -1,9 +1,11 @@
 import { Injectable, signal } from '@angular/core';
 import type {
+  BatchProgress,
   GeocodeHit,
   GeocoderCompareResult,
   GeocoderId,
   GeocoderOption,
+  GeocodingProgress,
 } from './geocoder.types';
 
 export const GEOCODER_OPTIONS: GeocoderOption[] = [
@@ -20,6 +22,12 @@ const ARCGIS_URL =
 const MVD_LAT = '-34.9011';
 const MVD_LON = '-56.1645';
 const UY_BBOX = '-58.45,-35.2,-53.0,-30.0';
+const GEOCODER_DELAY_MS = { min: 2000, max: 3000 };
+
+function randomDelay(range: { min: number; max: number }): Promise<void> {
+  const ms = range.min + Math.random() * (range.max - range.min);
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 interface NominatimHit {
   lat: string;
@@ -44,6 +52,7 @@ export class GeocoderService {
   readonly options = GEOCODER_OPTIONS;
   readonly selectedId = signal<GeocoderId>('nominatim');
   readonly searching = signal(false);
+  readonly geocodingProgress = signal<GeocodingProgress | null>(null);
 
   setSelected(id: GeocoderId): void {
     this.selectedId.set(id);
@@ -55,33 +64,81 @@ export class GeocoderService {
     return this.geocodeWithId(trimmed, this.selectedId());
   }
 
-  async geocodeAll(query: string): Promise<GeocoderCompareResult[]> {
+  async geocodeAll(
+    query: string,
+    options?: { batch?: BatchProgress; manageSearching?: boolean },
+  ): Promise<GeocoderCompareResult[]> {
     const trimmed = query.trim();
     if (!trimmed) return [];
 
-    this.searching.set(true);
+    const manageSearching = options?.manageSearching ?? true;
+    const batch = options?.batch;
+
+    if (manageSearching) {
+      this.searching.set(true);
+    }
+    this.geocodingProgress.set(null);
     try {
-      return await Promise.all(
-        this.options.map(async ({ id }) => {
-          try {
-            const hit = await this.geocodeWithId(trimmed, id);
-            return {
-              geocoderId: id,
-              hit,
-              error: hit ? null : 'Sin resultados',
-            };
-          } catch (err) {
-            return {
-              geocoderId: id,
-              hit: null,
-              error:
-                err instanceof Error ? err.message : 'Error al geocodificar',
-            };
-          }
-        }),
-      );
+      const results: GeocoderCompareResult[] = [];
+      for (let i = 0; i < this.options.length; i++) {
+        const { id } = this.options[i]!;
+        if (i > 0) {
+          this.geocodingProgress.set(
+            this.buildProgress(id, i + 1, true, batch),
+          );
+          await randomDelay(GEOCODER_DELAY_MS);
+        }
+        this.geocodingProgress.set(
+          this.buildProgress(id, i + 1, false, batch),
+        );
+        results.push(await this.geocodeOne(trimmed, id));
+      }
+      return results;
     } finally {
-      this.searching.set(false);
+      this.geocodingProgress.set(null);
+      if (manageSearching) {
+        this.searching.set(false);
+      }
+    }
+  }
+
+  private buildProgress(
+    geocoderId: GeocoderId,
+    step: number,
+    waiting: boolean,
+    batch?: BatchProgress,
+  ): GeocodingProgress {
+    return {
+      step,
+      total: this.options.length,
+      geocoderId,
+      waiting,
+      batchIndex: batch?.index,
+      batchTotal: batch?.total,
+      batchName: batch?.name,
+    };
+  }
+
+  private async geocodeOne(
+    query: string,
+    id: GeocoderId,
+  ): Promise<GeocoderCompareResult> {
+    const start = Date.now();
+    try {
+      const hit = await this.geocodeWithId(query, id);
+      return {
+        geocoderId: id,
+        hit,
+        error: hit ? null : 'Sin resultados',
+        elapsedMs: Date.now() - start,
+      };
+    } catch (err) {
+      return {
+        geocoderId: id,
+        hit: null,
+        error: err instanceof Error ? err.message : 'Error al geocodificar',
+        elapsedMs: Date.now() - start,
+      };
     }
   }
 

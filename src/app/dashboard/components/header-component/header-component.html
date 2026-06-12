@@ -42,7 +42,21 @@
     >
       Limpiar mapa
     </button>
+
+    <button
+      class="btn btn-secondary shrink-0"
+      type="button"
+      (click)="abrirEvaluacion()"
+      [disabled]="geocoderService.searching()"
+    >
+      Evaluar Geocoders
+    </button>
   </div>
 
   <h1 class="font-bold text-2xl">GeocoderApp</h1>
 </header>
+
+<app-geocoder-eval-modal
+  [open]="evalModalOpen()"
+  (closed)="cerrarEvaluacion()"
+/>
