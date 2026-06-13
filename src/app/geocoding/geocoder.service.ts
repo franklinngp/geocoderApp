@@ -12,12 +12,14 @@ export const GEOCODER_OPTIONS: GeocoderOption[] = [
   { id: 'nominatim', label: 'Nominatim (OSM)' },
   { id: 'photon', label: 'Photon (Komoot)' },
   { id: 'arcgis', label: 'ArcGIS (Esri)' },
+  { id: 'sugde', label: 'SUGDE (IDE)' },
 ];
 
 const NOMINATIM_URL = 'https://nominatim.openstreetmap.org/search';
 const PHOTON_URL = 'https://photon.komoot.io/api';
 const ARCGIS_URL =
   'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates';
+const SUGDE_URL = 'https://direcciones.ide.uy/api/v1/geocode/direcUnica';
 /** Centro Montevideo: prioriza resultados en el área del estudio */
 const MVD_LAT = '-34.9011';
 const MVD_LON = '-56.1645';
@@ -45,6 +47,26 @@ interface ArcGisCandidate {
   address?: string;
   location?: { x: number; y: number };
   extent?: { xmin: number; ymin: number; xmax: number; ymax: number };
+}
+
+interface SugdeResponse {
+  lat: number;
+  lng: number;
+  address?: string;
+  departamento?: string;
+  localidad?: string;
+  nomVia?: string;
+  portalNumber?: number;
+  inmueble?: string;
+  postalCode?: string;
+  stateMsg?: string;
+  ranking?: number;
+  id?: string;
+  idCalle?: number;
+  idLocalidad?: number;
+  idDepartamento?: number;
+  manzana?: number;
+  solar?: number;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -153,6 +175,8 @@ export class GeocoderService {
         return this.geocodePhoton(query);
       case 'arcgis':
         return this.geocodeArcgis(query);
+      case 'sugde':
+        return this.geocodeSugde(query);
     }
   }
 
@@ -257,6 +281,35 @@ export class GeocoderService {
       lat: candidate.location.y,
       displayName: candidate.address ?? query,
       extent,
+    };
+  }
+
+  private async geocodeSugde(query: string): Promise<GeocodeHit | null> {
+    const params = new URLSearchParams({
+      q: query,
+      limit: '1',
+    });
+
+    const response = await fetch(`${SUGDE_URL}?${params}`);
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`SUGDE: ${response.status} ${response.statusText}`);
+    }
+
+    const data = (await response.json()) as SugdeResponse[];
+    if (!Array.isArray(data) || !data.length) return null;
+
+    const result = data[0]!;
+    if (result.lat === undefined || result.lng === undefined) return null;
+
+    const parts = [
+      result.address,
+    ].filter(Boolean);
+
+    return {
+      lon: result.lng,
+      lat: result.lat,
+      displayName: parts[0] || query,
     };
   }
 }

@@ -1,4 +1,4 @@
-export type GeocoderId = 'nominatim' | 'photon' | 'arcgis';
+export type GeocoderId = 'nominatim' | 'photon' | 'arcgis' | 'sugde';
 
 export interface GeocoderOption {
   id: GeocoderId;
