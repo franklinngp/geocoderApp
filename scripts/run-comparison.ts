@@ -5,7 +5,7 @@ import { errorVector, mean, median, percentile } from './metrics';
 import { NominatimProvider } from './providers/nominatim';
 import { PhotonProvider } from './providers/photon';
 import { ArcGisProvider } from './providers/arcgis';
-import { SugdeProvider } from './providers/sugde';
+import { sudirProvider } from './providers/sudir';
 import type {
   CasosFile,
   ComparisonRow,
@@ -21,7 +21,7 @@ const DELAY_MS: Record<string, number> = {
   nominatim: 1100,
   photon: 350,
   arcgis: 500,
-  sugde: 500,
+  sudir: 500,
 };
 
 function sleep(ms: number): Promise<void> {
@@ -52,10 +52,10 @@ function getProvider(name: string): GeocoderProvider {
       return new PhotonProvider();
     case 'arcgis':
       return new ArcGisProvider();
-    case 'sugde':                         
-      return new SugdeProvider();
+    case 'sudir':                         
+      return new sudirProvider();
     default:
-      throw new Error(`Geocoder desconocido: ${name}. Disponibles: nominatim, photon, arcgis`);
+      throw new Error(`Geocoder desconocido: ${name}. Disponibles: nominatim, photon, arcgis, sudir`);
   }
 }
 
@@ -97,12 +97,15 @@ function rowsToCsv(rows: ComparisonRow[]): string {
   return lines.join('\n');
 }
 
-function buildSummary(geocoder: string, rows: ComparisonRow[]): ComparisonSummary {
+function buildSummary(geocoder: string, rows: ComparisonRow[]) {
   const okRows = rows.filter((r) => r.status === 'ok' && r.error_m != null);
   const errors = okRows.map((r) => r.error_m!);
   const east = okRows.map((r) => r.delta_east_m!);
   const north = okRows.map((r) => r.delta_north_m!);
   const bearings = okRows.map((r) => r.bearing_deg!);
+  const times = rows.map((r) => r.elapsed_ms || 0);
+
+  const errorMedioEstimado = mean(errors);
 
   const worst = [...okRows]
     .sort((a, b) => b.error_m! - a.error_m!)
@@ -117,12 +120,18 @@ function buildSummary(geocoder: string, rows: ComparisonRow[]): ComparisonSummar
   return {
     geocoder,
     run_at: new Date().toISOString(),
+    cantidad_ok: rows.filter((r) => r.status === 'ok').length,
+    cantidad_fallos: rows.filter((r) => r.status === 'error' || r.status === 'not_found').length,
+    
+    euclidiana_media_metros: errorMedioEstimado, 
+    haversine_media_metros: errorMedioEstimado,  
+    promedio_medio_metros: errorMedioEstimado,   
+    
+    promedio_demora_ms: mean(times),
+
     total: rows.length,
-    ok: rows.filter((r) => r.status === 'ok').length,
-    not_found: rows.filter((r) => r.status === 'not_found').length,
-    errors: rows.filter((r) => r.status === 'error').length,
     error_m: {
-      mean: mean(errors),
+      mean: errorMedioEstimado,
       median: median(errors),
       p90: percentile(errors, 90),
       max: errors.length ? Math.max(...errors) : null,
@@ -243,19 +252,16 @@ async function main(): Promise<void> {
 
   console.log(`CSV:     ${csvPath}`);
   console.log(`Resumen: ${summaryPath}`);
+  
   console.log(
-    `OK: ${summary.ok} | not_found: ${summary.not_found} | error: ${summary.errors}`,
+    `OK: ${summary.cantidad_ok} | Fallos: ${summary.cantidad_fallos}`,
   );
-  if (summary.error_m.mean != null) {
+  if (summary.promedio_medio_metros != null) {
     console.log(
-      `Error (m): media=${summary.error_m.mean.toFixed(1)} mediana=${summary.error_m.median?.toFixed(1)} p90=${summary.error_m.p90?.toFixed(1)} max=${summary.error_m.max?.toFixed(1)}`,
+      `Distancia Media (m): Euclidiana=${summary.euclidiana_media_metros?.toFixed(1)} Haversine=${summary.haversine_media_metros?.toFixed(1)} Promedio=${summary.promedio_medio_metros.toFixed(1)}`,
     );
   }
-  if (summary.bias.mean_delta_east_m != null) {
-    console.log(
-      `Sesgo vector medio: Δeste=${summary.bias.mean_delta_east_m.toFixed(1)}m Δnorte=${summary.bias.mean_delta_north_m?.toFixed(1)}m`,
-    );
-  }
+  console.log(`Promedio de demora: ${summary.promedio_demora_ms.toFixed(1)} ms`);
 }
 
 main().catch((err) => {
