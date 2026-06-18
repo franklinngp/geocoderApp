@@ -1,8 +1,8 @@
 import type { GeocodeResult, GeocoderProvider } from '../types';
 import https from 'https';
 
-const SUGDE_HOST = 'direcciones.ide.uy';
-const SUGDE_PATH = '/api/v1/geocode/direcUnica';
+const SUDIR_HOST = 'direcciones.ide.uy';
+const SUDIR_PATH = '/api/v1/geocode/direcUnica';
 
 interface SugdeDirecUnicaResult {
   address?: string;
@@ -34,7 +34,7 @@ interface SugdeDirecUnicaResult {
 }
 
 export class SugdeProvider implements GeocoderProvider {
-  readonly name = 'sugde';
+  readonly name = 'sudir';
 
   geocode(query: string): Promise<GeocodeResult | null> {
     return new Promise((resolve, reject) => {
@@ -44,8 +44,8 @@ export class SugdeProvider implements GeocoderProvider {
       });
 
       const options: https.RequestOptions = {
-        hostname: SUGDE_HOST,
-        path: `${SUGDE_PATH}?${params.toString()}`,
+        hostname: SUDIR_HOST,
+        path: `${SUDIR_PATH}?${params.toString()}`,
         method: 'GET',
         rejectUnauthorized: false,
         headers: {

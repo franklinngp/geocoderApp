@@ -10,14 +10,14 @@ export const GEOCODER_COLORS: Record<GeocoderId, string> = {
   nominatim: '#4ade80',
   photon: '#60a5fa',
   arcgis: '#fb923c',
-  sugde: '#a855f7',
+  sudir: '#a855f7',
 };
 
 const GEOCODER_ABBR: Record<GeocoderId, string> = {
   nominatim: 'NOM',
   photon: 'PHO',
   arcgis: 'ARC',
-  sugde: 'SUG',
+  sudir: 'SUG',
 };
 
 export function geocoderColor(id: GeocoderId | string | null): string {

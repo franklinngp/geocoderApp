@@ -12,14 +12,14 @@ export const GEOCODER_OPTIONS: GeocoderOption[] = [
   { id: 'nominatim', label: 'Nominatim (OSM)' },
   { id: 'photon', label: 'Photon (Komoot)' },
   { id: 'arcgis', label: 'ArcGIS (Esri)' },
-  { id: 'sugde', label: 'SUGDE (IDE)' },
+  { id: 'sudir', label: 'SUDIR (IDE)' },
 ];
 
 const NOMINATIM_URL = 'https://nominatim.openstreetmap.org/search';
 const PHOTON_URL = 'https://photon.komoot.io/api';
 const ARCGIS_URL =
   'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates';
-const SUGDE_URL = 'https://direcciones.ide.uy/api/v1/geocode/direcUnica';
+const SUDIR_URL = 'https://direcciones.ide.uy/api/v1/geocode/direcUnica';
 /** Centro Montevideo: prioriza resultados en el área del estudio */
 const MVD_LAT = '-34.9011';
 const MVD_LON = '-56.1645';
@@ -175,7 +175,7 @@ export class GeocoderService {
         return this.geocodePhoton(query);
       case 'arcgis':
         return this.geocodeArcgis(query);
-      case 'sugde':
+      case 'sudir':
         return this.geocodeSugde(query);
     }
   }
@@ -290,10 +290,10 @@ export class GeocoderService {
       limit: '1',
     });
 
-    const response = await fetch(`${SUGDE_URL}?${params}`);
+    const response = await fetch(`${SUDIR_URL}?${params}`);
     if (!response.ok) {
       if (response.status === 404) return null;
-      throw new Error(`SUGDE: ${response.status} ${response.statusText}`);
+      throw new Error(`SUDIR: ${response.status} ${response.statusText}`);
     }
 
     const data = (await response.json()) as SugdeResponse[];

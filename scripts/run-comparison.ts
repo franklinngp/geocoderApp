@@ -117,16 +117,22 @@ function buildSummary(geocoder: string, rows: ComparisonRow[]) {
       query_text: r.query_text,
     }));
 
+  const quality = {
+    excelentes: okRows.filter((r) => r.error_m! < 5).length,
+    buenos: okRows.filter((r) => r.error_m! >= 5 && r.error_m! < 30).length,
+    malos: okRows.filter((r) => r.error_m! >= 30).length,
+  };
+
   return {
     geocoder,
     run_at: new Date().toISOString(),
     cantidad_ok: rows.filter((r) => r.status === 'ok').length,
     cantidad_fallos: rows.filter((r) => r.status === 'error' || r.status === 'not_found').length,
-    
-    euclidiana_media_metros: errorMedioEstimado, 
-    haversine_media_metros: errorMedioEstimado,  
-    promedio_medio_metros: errorMedioEstimado,   
-    
+
+    euclidiana_media_metros: errorMedioEstimado,
+    haversine_media_metros: errorMedioEstimado,
+    promedio_medio_metros: errorMedioEstimado,
+
     promedio_demora_ms: mean(times),
 
     total: rows.length,
@@ -142,6 +148,7 @@ function buildSummary(geocoder: string, rows: ComparisonRow[]) {
       mean_delta_north_m: mean(north),
       mean_bearing_deg: mean(bearings),
     },
+    quality,
     worst_cases: worst,
   };
 }
@@ -262,6 +269,9 @@ async function main(): Promise<void> {
     );
   }
   console.log(`Promedio de demora: ${summary.promedio_demora_ms.toFixed(1)} ms`);
+  console.log(
+    `Calidad — Excelentes (<5m): ${summary.quality.excelentes} | Buenos (5–30m): ${summary.quality.buenos} | Malos (≥30m): ${summary.quality.malos}`,
+  );
 }
 
 main().catch((err) => {

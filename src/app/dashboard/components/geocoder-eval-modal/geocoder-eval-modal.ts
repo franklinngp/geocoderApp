@@ -39,6 +39,9 @@ export interface GeocoderSummaryRow {
   label: string;
   ok: number;
   failed: number;
+  excelentes: number;
+  buenos: number;
+  malos: number;
   meanEuclideanM: number | null;
   meanHaversineM: number | null;
   meanAverageM: number | null;
@@ -193,6 +196,9 @@ export class GeocoderEvalModalComponent {
         label,
         ok: okRows.length,
         failed,
+        excelentes: okRows.filter((r) => r.averageM! < 5).length,
+        buenos: okRows.filter((r) => r.averageM! >= 5 && r.averageM! < 30).length,
+        malos: okRows.filter((r) => r.averageM! >= 30).length,
         meanEuclideanM: mean(okRows.map((r) => r.euclideanM!)),
         meanHaversineM: mean(okRows.map((r) => r.haversineM!)),
         meanAverageM: mean(okRows.map((r) => r.averageM!)),
@@ -306,5 +312,12 @@ export class GeocoderEvalModalComponent {
   formatMs(value: number | null): string {
     if (value == null) return '—';
     return `${Math.round(value)} ms`;
+  }
+
+  quality(m: number | null): { label: string; cls: string } {
+    if (m == null) return { label: '—', cls: '' };
+    if (m < 5) return { label: 'Excelente', cls: 'text-success' };
+    if (m < 30) return { label: 'Bueno', cls: 'text-warning' };
+    return { label: 'Malo', cls: 'text-error' };
   }
 }

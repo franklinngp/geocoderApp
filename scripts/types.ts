@@ -85,6 +85,11 @@ export interface ComparisonSummary {
     mean_delta_north_m: number | null;
     mean_bearing_deg: number | null;
   };
+  quality: {
+    excelentes: number;
+    buenos: number;
+    malos: number;
+  };
   worst_cases: Array<{
     case_id: string;
     name: string;

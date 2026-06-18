@@ -27,6 +27,7 @@ const DETAIL_HEADERS = [
   'Dist. euclidiana (m)',
   'Dist. Haversine (m)',
   'Promedio (m)',
+  'Calidad',
   'Tiempo respuesta (ms)',
   'Result. Lat',
   'Result. Lon',
@@ -36,6 +37,9 @@ const SUMMARY_HEADERS = [
   'Geocoder',
   'OK',
   'Fallos',
+  'Excelentes (<5m)',
+  'Buenos (5-30m)',
+  'Malos (≥30m)',
   'Euclidiana media (m)',
   'Haversine media (m)',
   'Promedio medio (m)',
@@ -45,6 +49,13 @@ const SUMMARY_HEADERS = [
 function round(value: number | null, digits = 2): number | '' {
   if (value == null) return '';
   return Number(value.toFixed(digits));
+}
+
+function qualityLabel(m: number | null): string {
+  if (m == null) return '';
+  if (m < 5) return 'Excelente';
+  if (m < 30) return 'Bueno';
+  return 'Malo';
 }
 
 function detailRowToArray(row: EvalExportRow): (string | number)[] {
@@ -59,6 +70,7 @@ function detailRowToArray(row: EvalExportRow): (string | number)[] {
     round(row.euclideanM),
     round(row.haversineM),
     round(row.averageM),
+    qualityLabel(row.averageM),
     row.elapsedMs,
     row.resultLat ?? '',
     row.resultLon ?? '',
@@ -79,6 +91,9 @@ function buildSummaryRows(rows: EvalExportRow[]): (string | number)[][] {
       label,
       ok.length,
       geocoderRows.length - ok.length,
+      ok.filter((r) => r.averageM != null && r.averageM < 5).length,
+      ok.filter((r) => r.averageM != null && r.averageM >= 5 && r.averageM < 30).length,
+      ok.filter((r) => r.averageM != null && r.averageM >= 30).length,
       round(mean(ok.map((r) => r.euclideanM!))),
       round(mean(ok.map((r) => r.haversineM!))),
       round(mean(ok.map((r) => r.averageM!))),

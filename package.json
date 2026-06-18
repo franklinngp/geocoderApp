@@ -13,7 +13,10 @@
     "compare:photon": "tsx scripts/run-comparison.ts --geocoder photon",
     "compare:photon:test": "tsx scripts/run-comparison.ts --geocoder photon --limit 5",
     "compare:arcgis": "tsx scripts/run-comparison.ts --geocoder arcgis",
-    "compare:arcgis:test": "tsx scripts/run-comparison.ts --geocoder arcgis --limit 5"
+    "compare:arcgis:test": "tsx scripts/run-comparison.ts --geocoder arcgis --limit 5",
+    "compare:sudir": "tsx scripts/run-comparison.ts --geocoder sudir",
+    "compare:sudir:test": "tsx scripts/run-comparison.ts --geocoder sudir --limit 5",
+    "compare:all": "npm run compare:nominatim && npm run compare:photon && npm run compare:arcgis && npm run compare:sudir"
   },
   "private": true,
   "packageManager": "npm@11.8.0",

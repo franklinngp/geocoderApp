@@ -126,6 +126,7 @@
                   <th class="text-right">Euclidiana</th>
                   <th class="text-right">Haversine</th>
                   <th class="text-right">Promedio</th>
+                  <th class="text-right">Calidad</th>
                   <th class="text-right">Tiempo</th>
                 </tr>
               </thead>
@@ -146,9 +147,10 @@
                       <td class="text-right font-mono tabular-nums">{{ formatDistance(row.euclideanM) }}</td>
                       <td class="text-right font-mono tabular-nums">{{ formatDistance(row.haversineM) }}</td>
                       <td class="text-right font-mono tabular-nums">{{ formatDistance(row.averageM) }}</td>
+                      <td class="text-right font-semibold" [class]="quality(row.averageM).cls">{{ quality(row.averageM).label }}</td>
                       <td class="text-right font-mono tabular-nums">{{ formatMs(row.elapsedMs) }}</td>
                     } @else {
-                      <td colspan="5" class="text-sm text-error">{{ row.message }}</td>
+                      <td colspan="6" class="text-sm text-error">{{ row.message }}</td>
                     }
                   </tr>
                 }
@@ -168,6 +170,9 @@
                   <tr class="text-xs uppercase tracking-wide text-base-content/60">
                     <th>Geocoder</th>
                     <th class="text-right">OK / Fallos</th>
+                    <th class="text-right text-success">Excelentes</th>
+                    <th class="text-right text-warning">Buenos</th>
+                    <th class="text-right text-error">Malos</th>
                     <th class="text-right">Euclidiana media</th>
                     <th class="text-right">Haversine media</th>
                     <th class="text-right">Promedio medio</th>
@@ -189,6 +194,9 @@
                       <td class="text-right font-mono tabular-nums text-xs">
                         {{ row.ok }} / {{ row.failed }}
                       </td>
+                      <td class="text-right font-mono tabular-nums text-success">{{ row.excelentes }}</td>
+                      <td class="text-right font-mono tabular-nums text-warning">{{ row.buenos }}</td>
+                      <td class="text-right font-mono tabular-nums text-error">{{ row.malos }}</td>
                       <td class="text-right font-mono tabular-nums">{{ formatDistance(row.meanEuclideanM) }}</td>
                       <td class="text-right font-mono tabular-nums">{{ formatDistance(row.meanHaversineM) }}</td>
                       <td class="text-right font-mono tabular-nums">{{ formatDistance(row.meanAverageM) }}</td>
@@ -212,6 +220,7 @@
                     <th class="text-right">Euclidiana</th>
                     <th class="text-right">Haversine</th>
                     <th class="text-right">Promedio</th>
+                    <th class="text-right">Calidad</th>
                     <th class="text-right">Tiempo</th>
                   </tr>
                 </thead>
@@ -233,9 +242,10 @@
                         <td class="text-right font-mono tabular-nums">{{ formatDistance(row.euclideanM) }}</td>
                         <td class="text-right font-mono tabular-nums">{{ formatDistance(row.haversineM) }}</td>
                         <td class="text-right font-mono tabular-nums">{{ formatDistance(row.averageM) }}</td>
+                        <td class="text-right font-semibold" [class]="quality(row.averageM).cls">{{ quality(row.averageM).label }}</td>
                         <td class="text-right font-mono tabular-nums">{{ formatMs(row.elapsedMs) }}</td>
                       } @else {
-                        <td colspan="4" class="text-xs text-error">{{ row.message }}</td>
+                        <td colspan="5" class="text-xs text-error">{{ row.message }}</td>
                       }
                     </tr>
                   }
