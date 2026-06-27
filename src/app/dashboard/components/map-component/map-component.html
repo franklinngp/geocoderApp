@@ -1,5 +1,5 @@
-    <div #map class="h-full w-full relative">
+    <div #map class="h-full w-full relative overflow-hidden">
         <app-centrar-mapa class="absolute top-2 right-2 z-10"></app-centrar-mapa>
-        <app-layer-controller class="absolute top-25 right-2 z-10"></app-layer-controller>
+        <app-layer-controller class="absolute top-12 right-2 z-10 w-80 max-w-[min(20rem,calc(100vw-1rem))]"></app-layer-controller>
         <div #popup class="hidden absolute rounded-sm bg-base-100  min-w-50  p-3 shadow-lg border text-sm pointer-events-none"></div>
     </div>

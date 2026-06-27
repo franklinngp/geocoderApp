@@ -3,3 +3,8 @@
 @import 'ol/ol.css';
 @import 'tailwindcss';
 @plugin "daisyui";
+
+html,
+body {
+  overflow: hidden;
+}

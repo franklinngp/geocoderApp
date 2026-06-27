@@ -30,6 +30,8 @@ import type MapBrowserEvent from 'ol/MapBrowserEvent';
 import { getCenter } from 'ol/extent';
 import Point from 'ol/geom/Point';
 import { toLonLat } from 'ol/proj';
+import { geocoderSearchMarkerStyle } from '../../../geocoding/geocoder-colors';
+import { drawFeatureStyle } from '../../draw-styles';
 import { LayerController } from "../layer-controller/layer-controller";
 
 @Component({
@@ -191,6 +193,7 @@ this.map.addLayer(capaDepartamentos);
         }),
       }),
     });
+    puntosTuristicosLayer.set('name', 'layer_puntos_turisticos');
 
     this.map.addLayer(puntosTuristicosLayer);
 
@@ -199,18 +202,22 @@ this.map.addLayer(capaDepartamentos);
 
     const searchLayer = new VectorLayer({
       source: searchSource,
-      style: new Style({
-        image: new Icon({
-          src: 'map-marker-area.svg',
-          width: 60,
-          height: 60,
-          anchor: [0.5, 1],
-        }),
-      }),
+      style: geocoderSearchMarkerStyle,
       zIndex: 20,
     });
     searchLayer.set('name', 'layer_search');
     this.map.addLayer(searchLayer);
+
+    const drawSource = new VectorSource();
+    this.mapService.registerDrawSource(drawSource);
+
+    const drawLayer = new VectorLayer({
+      source: drawSource,
+      style: drawFeatureStyle,
+      zIndex: 25,
+    });
+    drawLayer.set('name', 'layer_draw');
+    this.map.addLayer(drawLayer);
 
     this.map.updateSize();
 
