@@ -7,7 +7,7 @@ function toRad(deg: number): number {
   return (deg * Math.PI) / 180;
 }
 
-/** Distancia en metros entre dos puntos WGS84 (lon, lat). */
+/** Distancia haversine en metros entre dos puntos WGS84 (lon, lat). */
 export function haversineMeters(
   lon1: number,
   lat1: number,
@@ -18,10 +18,26 @@ export function haversineMeters(
   const φ2 = toRad(lat2);
   const Δφ = toRad(lat2 - lat1);
   const Δλ = toRad(lon2 - lon1);
-  const a =
+  const a = Math.min(
+    1,
     Math.sin(Δφ / 2) ** 2 +
-    Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2;
-  return EARTH_RADIUS_M * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2,
+  );
+  return EARTH_RADIUS_M * 2 * Math.asin(Math.sqrt(a));
+}
+
+/** Distancia euclidiana en metros usando aproximación plana local. */
+export function euclideanMeters(
+  lon1: number,
+  lat1: number,
+  lon2: number,
+  lat2: number,
+): number {
+  const meanLat = (lat1 + lat2) / 2;
+  const metersPerDegLon = METERS_PER_DEG_LAT * Math.cos(toRad(meanLat));
+  const dx = (lon2 - lon1) * metersPerDegLon;
+  const dy = (lat2 - lat1) * METERS_PER_DEG_LAT;
+  return Math.hypot(dx, dy);
 }
 
 /** Vector de error ref → resultado (este/norte en m, bearing desde el norte). */
@@ -40,6 +56,7 @@ export function errorVector(
 
   return {
     error_m: haversineMeters(refLon, refLat, resLon, resLat),
+    euclidean_m: euclideanMeters(refLon, refLat, resLon, resLat),
     bearing_deg: bearingDeg,
     delta_east_m: deltaEast,
     delta_north_m: deltaNorth,

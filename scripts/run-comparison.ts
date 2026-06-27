@@ -81,6 +81,7 @@ function rowsToCsv(rows: ComparisonRow[]): string {
     'result_lon',
     'result_lat',
     'error_m',
+    'euclidean_m',
     'bearing_deg',
     'delta_east_m',
     'delta_north_m',
@@ -99,13 +100,19 @@ function rowsToCsv(rows: ComparisonRow[]): string {
 
 function buildSummary(geocoder: string, rows: ComparisonRow[]) {
   const okRows = rows.filter((r) => r.status === 'ok' && r.error_m != null);
-  const errors = okRows.map((r) => r.error_m!);
+  const haversineErrors = okRows.map((r) => r.error_m!);
+  const euclideanErrors = okRows.map((r) => r.euclidean_m!);
   const east = okRows.map((r) => r.delta_east_m!);
   const north = okRows.map((r) => r.delta_north_m!);
   const bearings = okRows.map((r) => r.bearing_deg!);
   const times = rows.map((r) => r.elapsed_ms || 0);
 
-  const errorMedioEstimado = mean(errors);
+  const haversineMean = mean(haversineErrors);
+  const euclideanMean = mean(euclideanErrors);
+  const promedioMean =
+    haversineMean != null && euclideanMean != null
+      ? (haversineMean + euclideanMean) / 2
+      : (haversineMean ?? euclideanMean);
 
   const worst = [...okRows]
     .sort((a, b) => b.error_m! - a.error_m!)
@@ -119,8 +126,8 @@ function buildSummary(geocoder: string, rows: ComparisonRow[]) {
 
   const quality = {
     excelentes: okRows.filter((r) => r.error_m! < 5).length,
-    buenos: okRows.filter((r) => r.error_m! >= 5 && r.error_m! < 30).length,
-    malos: okRows.filter((r) => r.error_m! >= 30).length,
+    buenos: okRows.filter((r) => r.error_m! >= 5 && r.error_m! < 50).length,
+    malos: okRows.filter((r) => r.error_m! >= 50).length,
   };
 
   return {
@@ -129,19 +136,19 @@ function buildSummary(geocoder: string, rows: ComparisonRow[]) {
     cantidad_ok: rows.filter((r) => r.status === 'ok').length,
     cantidad_fallos: rows.filter((r) => r.status === 'error' || r.status === 'not_found').length,
 
-    euclidiana_media_metros: errorMedioEstimado,
-    haversine_media_metros: errorMedioEstimado,
-    promedio_medio_metros: errorMedioEstimado,
+    euclidiana_media_metros: euclideanMean,
+    haversine_media_metros: haversineMean,
+    promedio_medio_metros: promedioMean,
 
-    promedio_demora_ms: mean(times),
+    promedio_demora_ms: mean(times) ?? 0,
 
     total: rows.length,
     error_m: {
-      mean: errorMedioEstimado,
-      median: median(errors),
-      p90: percentile(errors, 90),
-      max: errors.length ? Math.max(...errors) : null,
-      min: errors.length ? Math.min(...errors) : null,
+      mean: haversineMean,
+      median: median(haversineErrors),
+      p90: percentile(haversineErrors, 90),
+      max: haversineErrors.length ? Math.max(...haversineErrors) : null,
+      min: haversineErrors.length ? Math.min(...haversineErrors) : null,
     },
     bias: {
       mean_delta_east_m: mean(east),
@@ -174,6 +181,7 @@ async function processCase(
       result_lon: null,
       result_lat: null,
       error_m: null,
+      euclidean_m: null,
       bearing_deg: null,
       delta_east_m: null,
       delta_north_m: null,
@@ -202,6 +210,7 @@ async function processCase(
           result_lon: result.lon,
           result_lat: result.lat,
           error_m: metrics.error_m,
+          euclidean_m: metrics.euclidean_m,
           bearing_deg: metrics.bearing_deg,
           delta_east_m: metrics.delta_east_m,
           delta_north_m: metrics.delta_north_m,
@@ -270,7 +279,7 @@ async function main(): Promise<void> {
   }
   console.log(`Promedio de demora: ${summary.promedio_demora_ms.toFixed(1)} ms`);
   console.log(
-    `Calidad — Excelentes (<5m): ${summary.quality.excelentes} | Buenos (5–30m): ${summary.quality.buenos} | Malos (≥30m): ${summary.quality.malos}`,
+    `Calidad — Excelentes (<5m): ${summary.quality.excelentes} | Buenos (5–50m): ${summary.quality.buenos} | Malos (≥50m): ${summary.quality.malos}`,
   );
 }
 

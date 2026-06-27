@@ -39,6 +39,7 @@ export interface GeocoderProvider {
 
 export interface ErrorMetrics {
   error_m: number;
+  euclidean_m: number;
   bearing_deg: number;
   delta_east_m: number;
   delta_north_m: number;
@@ -56,6 +57,7 @@ export interface ComparisonRow {
   result_lon: number | null;
   result_lat: number | null;
   error_m: number | null;
+  euclidean_m: number | null;
   bearing_deg: number | null;
   delta_east_m: number | null;
   delta_north_m: number | null;
