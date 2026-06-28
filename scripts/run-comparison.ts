@@ -52,10 +52,12 @@ function getProvider(name: string): GeocoderProvider {
       return new PhotonProvider();
     case 'arcgis':
       return new ArcGisProvider();
-    case 'sudir':                         
+    case 'sudir':
       return new sudirProvider();
     default:
-      throw new Error(`Geocoder desconocido: ${name}. Disponibles: nominatim, photon, arcgis, sudir`);
+      throw new Error(
+        `Geocoder desconocido: ${name}. Disponibles: nominatim, photon, arcgis, sudir`,
+      );
   }
 }
 
@@ -199,12 +201,7 @@ async function processCase(
       if (!result) {
         row.status = 'not_found';
       } else {
-        const metrics = errorVector(
-          testCase.ref_lon,
-          testCase.ref_lat,
-          result.lon,
-          result.lat,
-        );
+        const metrics = errorVector(testCase.ref_lon, testCase.ref_lat, result.lon, result.lat);
         row = {
           ...row,
           result_lon: result.lon,
@@ -268,10 +265,8 @@ async function main(): Promise<void> {
 
   console.log(`CSV:     ${csvPath}`);
   console.log(`Resumen: ${summaryPath}`);
-  
-  console.log(
-    `OK: ${summary.cantidad_ok} | Fallos: ${summary.cantidad_fallos}`,
-  );
+
+  console.log(`OK: ${summary.cantidad_ok} | Fallos: ${summary.cantidad_fallos}`);
   if (summary.promedio_medio_metros != null) {
     console.log(
       `Distancia Media (m): Euclidiana=${summary.euclidiana_media_metros?.toFixed(1)} Haversine=${summary.haversine_media_metros?.toFixed(1)} Promedio=${summary.promedio_medio_metros.toFixed(1)}`,

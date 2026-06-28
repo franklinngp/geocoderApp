@@ -38,8 +38,8 @@ const SUMMARY_HEADERS = [
   'OK',
   'Fallos',
   'Excelentes (<5m)',
-  'Buenos (5-30m)',
-  'Malos (≥30m)',
+  'Buenos (5-50m)',
+  'Malos (≥50m)',
   'Euclidiana media (m)',
   'Haversine media (m)',
   'Promedio medio (m)',
@@ -54,7 +54,7 @@ function round(value: number | null, digits = 2): number | '' {
 function qualityLabel(m: number | null): string {
   if (m == null) return '';
   if (m < 5) return 'Excelente';
-  if (m < 30) return 'Bueno';
+  if (m < 50) return 'Bueno';
   return 'Malo';
 }
 
@@ -92,8 +92,8 @@ function buildSummaryRows(rows: EvalExportRow[]): (string | number)[][] {
       ok.length,
       geocoderRows.length - ok.length,
       ok.filter((r) => r.averageM != null && r.averageM < 5).length,
-      ok.filter((r) => r.averageM != null && r.averageM >= 5 && r.averageM < 30).length,
-      ok.filter((r) => r.averageM != null && r.averageM >= 30).length,
+      ok.filter((r) => r.averageM != null && r.averageM >= 5 && r.averageM < 50).length,
+      ok.filter((r) => r.averageM != null && r.averageM >= 50).length,
       round(mean(ok.map((r) => r.euclideanM!))),
       round(mean(ok.map((r) => r.haversineM!))),
       round(mean(ok.map((r) => r.averageM!))),
@@ -106,27 +106,13 @@ export function downloadEvalXlsx(
   rows: EvalExportRow[],
   filename = 'evaluacion-geocoders.xlsx',
 ): void {
-  const detailData = [
-    [...DETAIL_HEADERS],
-    ...rows.map(detailRowToArray),
-  ];
+  const detailData = [[...DETAIL_HEADERS], ...rows.map(detailRowToArray)];
 
-  const summaryData = [
-    [...SUMMARY_HEADERS],
-    ...buildSummaryRows(rows),
-  ];
+  const summaryData = [[...SUMMARY_HEADERS], ...buildSummaryRows(rows)];
 
   const workbook = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(
-    workbook,
-    XLSX.utils.aoa_to_sheet(detailData),
-    'Detalle',
-  );
-  XLSX.utils.book_append_sheet(
-    workbook,
-    XLSX.utils.aoa_to_sheet(summaryData),
-    'Resumen',
-  );
+  XLSX.utils.book_append_sheet(workbook, XLSX.utils.aoa_to_sheet(detailData), 'Detalle');
+  XLSX.utils.book_append_sheet(workbook, XLSX.utils.aoa_to_sheet(summaryData), 'Resumen');
 
   XLSX.writeFile(workbook, filename);
 }
