@@ -1,16 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  input,
-  output,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, output, signal } from '@angular/core';
 import { DIRECCIONES, type DireccionItem } from '../../../data/direcciones';
-import {
-  downloadEvalXlsx,
-  type EvalExportRow,
-} from '../../../geocoding/export-eval-xlsx';
+import { downloadEvalXlsx, type EvalExportRow } from '../../../geocoding/export-eval-xlsx';
 import { geocoderColor } from '../../../geocoding/geocoder-colors';
 import { GeocoderService } from '../../../geocoding/geocoder.service';
 import type { GeocoderCompareResult, GeocoderId } from '../../../geocoding/geocoder.types';
@@ -109,14 +99,10 @@ export class GeocoderEvalModalComponent {
     this.exportRows.set([]);
   }
 
-  private buildRows(
-    point: DireccionItem,
-    results: GeocoderCompareResult[],
-  ): GeocoderEvalRow[] {
+  private buildRows(point: DireccionItem, results: GeocoderCompareResult[]): GeocoderEvalRow[] {
     return results.map((r) => {
       const label =
-        this.geocoderService.options.find((o) => o.id === r.geocoderId)
-          ?.label ?? r.geocoderId;
+        this.geocoderService.options.find((o) => o.id === r.geocoderId)?.label ?? r.geocoderId;
 
       if (r.error || !r.hit) {
         return {
@@ -133,12 +119,7 @@ export class GeocoderEvalModalComponent {
         };
       }
 
-      const metrics = distanceMetrics(
-        point.lon,
-        point.lat,
-        r.hit.lon,
-        r.hit.lat,
-      );
+      const metrics = distanceMetrics(point.lon, point.lat, r.hit.lon, r.hit.lat);
 
       return {
         geocoderId: r.geocoderId,
@@ -161,9 +142,7 @@ export class GeocoderEvalModalComponent {
   ): EvalExportRow[] {
     return allResults.flatMap((pr) =>
       pr.rows.map((row) => {
-        const raw = rawResults
-          ?.get(pr.point.id)
-          ?.find((r) => r.geocoderId === row.geocoderId);
+        const raw = rawResults?.get(pr.point.id)?.find((r) => r.geocoderId === row.geocoderId);
         return {
           point: pr.point,
           geocoderId: row.geocoderId,
@@ -186,9 +165,7 @@ export class GeocoderEvalModalComponent {
       const okRows = allResults.flatMap((pr) =>
         pr.rows.filter((r) => r.geocoderId === id && r.status === 'ok'),
       );
-      const allRows = allResults.flatMap((pr) =>
-        pr.rows.filter((r) => r.geocoderId === id),
-      );
+      const allRows = allResults.flatMap((pr) => pr.rows.filter((r) => r.geocoderId === id));
       const failed = allResults.length - okRows.length;
 
       return {
@@ -197,8 +174,8 @@ export class GeocoderEvalModalComponent {
         ok: okRows.length,
         failed,
         excelentes: okRows.filter((r) => r.averageM! < 5).length,
-        buenos: okRows.filter((r) => r.averageM! >= 5 && r.averageM! < 30).length,
-        malos: okRows.filter((r) => r.averageM! >= 30).length,
+        buenos: okRows.filter((r) => r.averageM! >= 5 && r.averageM! < 50).length,
+        malos: okRows.filter((r) => r.averageM! >= 50).length,
         meanEuclideanM: mean(okRows.map((r) => r.euclideanM!)),
         meanHaversineM: mean(okRows.map((r) => r.haversineM!)),
         meanAverageM: mean(okRows.map((r) => r.averageM!)),
@@ -208,9 +185,7 @@ export class GeocoderEvalModalComponent {
   }
 
   private buildDetailRows(allResults: PointEvalResult[]): BatchDetailRow[] {
-    return allResults.flatMap((pr) =>
-      pr.rows.map((row) => ({ ...row, point: pr.point })),
-    );
+    return allResults.flatMap((pr) => pr.rows.map((row) => ({ ...row, point: pr.point })));
   }
 
   private exportXlsx(rows: EvalExportRow[], suffix: string): void {
@@ -249,9 +224,7 @@ export class GeocoderEvalModalComponent {
       this.exportRows.set(exportData);
       this.exportXlsx(exportData, `punto-${point.id}`);
     } catch (err) {
-      this.evalError.set(
-        err instanceof Error ? err.message : 'Error al evaluar geocoders',
-      );
+      this.evalError.set(err instanceof Error ? err.message : 'Error al evaluar geocoders');
     } finally {
       this.evaluating.set(false);
     }
@@ -294,9 +267,7 @@ export class GeocoderEvalModalComponent {
       this.exportRows.set(exportData);
       this.exportXlsx(exportData, `todos-${this.direcciones.length}`);
     } catch (err) {
-      this.evalError.set(
-        err instanceof Error ? err.message : 'Error al evaluar geocoders',
-      );
+      this.evalError.set(err instanceof Error ? err.message : 'Error al evaluar geocoders');
     } finally {
       this.geocoderService.searching.set(false);
       this.evaluating.set(false);
@@ -317,7 +288,7 @@ export class GeocoderEvalModalComponent {
   quality(m: number | null): { label: string; cls: string } {
     if (m == null) return { label: '—', cls: '' };
     if (m < 5) return { label: 'Excelente', cls: 'text-success' };
-    if (m < 30) return { label: 'Bueno', cls: 'text-warning' };
+    if (m < 50) return { label: 'Bueno', cls: 'text-warning' };
     return { label: 'Malo', cls: 'text-error' };
   }
 }
